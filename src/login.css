@@ -114,7 +114,7 @@
     align-self: center; */
     color: white;
     font-family: "Lucida Console", "Courier New", monospace;
-    transform: translateY(150px);
+    transform: translateY(80px);
     margin-bottom: 5px;
     white-space: nowrap; 
     text-shadow: 2px 2px 5px rgb(74, 90, 126);
@@ -135,12 +135,12 @@
     
 }
 .box_input_left [type=text]{
-    padding: 12px 200px;
+    padding: 12px 20px;
     margin: 8px 0;
     /* justify-self: center;
     align-self: center; */
     font-family: "Lucida Console", "Courier New", monospace;
-    transform: translateY(160px);
+    transform: translateY(140px) translateX(-100px);
     /* background-color: white; */
     /* background-image: url('searchicon.png'); */
     background-position: 10px 10px;
@@ -149,9 +149,14 @@
     border-radius: 8px;
     background-color: #a7bceb;
     resize: none;
-    padding-left: 40px;
+    padding-left: 20px;
     transition: width 0.4s ease-in-out;
     box-sizing: border-box;
+    /* height: 200px; */
+    width: 30%;
+    font-size: 14pt;
+
+    
     
 
 }
@@ -165,7 +170,7 @@
     /* justify-self: center;
     align-self: center; */
     /* font-family: "Lucida Console", "Courier New", monospace; */
-    transform: translateY(180px);
+    transform: translateY(100 px) translateX(100px);
     /* transform: translateY(100px); */
     color: rgb(255, 0, 0);
     display: block;
