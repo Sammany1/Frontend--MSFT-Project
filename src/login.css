@@ -36,6 +36,7 @@
 .box_text_right{
     /* justify-self: center;
     align-self: center; */
+    color: white;
     font-family: "Lucida Console", "Courier New", monospace;
     transform: translateY(150px);
     margin-bottom: 5px;
@@ -111,6 +112,7 @@
 .box_text_left{
     /* justify-self: center;
     align-self: center; */
+    color: white;
     font-family: "Lucida Console", "Courier New", monospace;
     transform: translateY(150px);
     margin-bottom: 5px;

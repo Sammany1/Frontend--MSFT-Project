@@ -24,15 +24,15 @@ export default function Login() {
                     </div>
                     <div className="right-box">
                     <div className="box_text_right">
-                    Please Enter Room ID Here
+                    Create a New Room 
                     </div>
-                    <div className="box_input_right">
-                    <form action="/url" method="GET">
-                    <input type="text" id="id" name="room_id" placeholder="Enter room ID.."></input>
-                    </form>
+                    <div className="box_input_right">                
+                     <div className="box_text_right">
+                    {sample.users.random_id}
+                    </div>
                     </div>
                     <div >
-                    <button className="button_right" type="button" id="myBtn" onclick="Enter_Button()" >Enter</button>
+                    <button className="button_right" type="button" id="myBtn" onclick="Enter_Button()" >Get Room ID</button>
                     {/* <input type="button" class="button" value="Enter"></input> */}
                     {/* <button class="button-50" role="button">Button 50</button> */}
                     </div>
