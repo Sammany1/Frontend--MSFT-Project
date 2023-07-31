@@ -13,18 +13,17 @@ export default function Card() {
     
     return (
         <div className="card">
-            <div className="top_text"  >
-            {/* imported from JSON file */}
-                Welcome {sample.users.site} <br />
+            <div className="top_text_header" >
+               Welcome {sample.users.user} <br/>
+            </div>
+            <div className="top_text_sub">
+                your account value is
                 
-                
-                your account value is 
-                <div className="main_number">
-                
-                3000
-                
-                </div>
-                </div>
+            </div>
+             
+            <div className="main_number">
+            ${sample.users.random_id}
+            </div>
                 
                 
                
