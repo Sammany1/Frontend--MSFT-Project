@@ -9,9 +9,8 @@ function Enter_Button() {
 export default function Login() {
     const sample = require('./temp.json');
     console.log(sample);
-    function Enter_Button() {
-         alert('Hello!');
-      }
+    const [ roomId ,setRoomId] = React.useState(0);
+
     return ( 
         
         <div className="login">
@@ -26,10 +25,7 @@ export default function Login() {
                     </form>
                     </div>
                     <div >
-                    <button className="button_left" type="button" id="myBtn" onclick = {() => {
-  this.sayHello();
-  this.setState({ name: "James"});
-}} >Enter</button>
+                    <button className="button_left" type="button" id="myBtn" onclick = {Enter_Button()} >Enter</button>
                     {/* <input type="button" class="button" value="Enter"></input> */}
                     {/* <button class="button-50" role="button">Button 50</button> */}
                     </div>
@@ -39,10 +35,10 @@ export default function Login() {
                     Create a New Room 
                     </div>
                     <div className="box_output_right">                
-                    Your Room ID: {sample.users.random_id}
+                    Your Room ID: {roomId}
                     </div>
                     <div >
-                    <button className="button_right" type="button" id="myBtn" onclick="Enter_Button()" >Get Room ID prop</button>
+                    <button className="button_right" type="button" id="myBtn" onClick={() => setRoomId(sample.users.random_id)} >Get Room ID</button>
                     {/* <input type="button" class="button" value="Enter"></input> */}
                     {/* <button class="button-50" role="button">Button 50</button> */}
                     </div>
