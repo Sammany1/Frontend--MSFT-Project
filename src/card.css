@@ -1,8 +1,7 @@
-.card{
+.profile_card{
 
 width: 50%;
 height: 200px;
-transform: rotate(-90deg);
 transform: translateY(20%);
 flex-shrink: 0;
 left: 2%;
@@ -26,6 +25,7 @@ line-height: 200% ;
     margin-top: 50px;
     color: blue;
     font-size: 300%;
+    font-weight: bold;
 }
 .top_text{
     display: flex;
@@ -33,6 +33,7 @@ line-height: 200% ;
 }
 .top_text_header {
     font-size: large;
+    font-weight: bold;
 }
 .top_text_sub{
     font-size: small;
@@ -45,3 +46,56 @@ line-height: 200% ;
     padding: 10px;
     font-size: 110%;
 }
+/* ----------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------- */
+
+.owned_card{
+
+    fill: linear-gradient(180deg, rgba(178, 237, 211, 0.48) 0%, rgba(194, 245, 223, 0.24) 83.85%);
+    width: 456px;
+    height: 531px;
+    flex-shrink: 0;
+    transform: translateX(180%) translateY(-30%) ;
+    width: 30%;
+    height: 500px;
+    flex-shrink: 0;
+    left: 2%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1%;
+    border-radius: 16px;
+    background: #B2EDD3;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-family: "Lucida Console", "Courier New", monospace;
+    line-height: 200% ;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.name{
+    font-size: 140%;
+    font-weight: bold;
+    /* font-family: ; */
+}
+.status{
+    /* color: rgb(33, 191, 115); */
+    color: rgb(41, 167, 24);
+}
+.price{
+    font-size: 120%;
+    font-weight: bold;
+}
+.owned{
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.row {
+    border-bottom: 1px solid;
+    padding: 10px;
+  }
