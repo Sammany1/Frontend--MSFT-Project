@@ -13,6 +13,8 @@ export default function Card() {
     
     return (
         <div className="card">
+            <div className="left">
+            <div className="top_text">
             <div className="top_text_header" >
                Welcome {sample.users.user} <br/>
             </div>
@@ -20,9 +22,18 @@ export default function Card() {
                 your account value is
                 
             </div>
+            </div>
              
             <div className="main_number">
-            ${sample.users.random_id}
+            ${sample.users.random_id} 
+            </div>
+            </div>
+            <div className="right_text"> 
+            
+                Available Amount = $240 <br/>
+                Stocks Value = $1090.29 <br/> 
+                Profit = + $240
+
             </div>
                 
                 

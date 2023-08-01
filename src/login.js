@@ -38,9 +38,9 @@ export default function Login() {
                     Your Room ID: {roomId}
                     </div>
                     <div >
-                    <button className="button_right" type="button" id="myBtn" onClick={() => setRoomId(sample.users.random_id)} >Get Room ID</button>
-                    {/* <input type="button" class="button" value="Enter"></input> */}
-                    {/* <button class="button-50" role="button">Button 50</button> */}
+                    <button className="button_right" type="button" id="myBtn" onClick={() => setRoomId(sample.users.random_id)} >
+                    Get Room ID
+                    </button>
                     </div>
                 </div>
             </div>    
