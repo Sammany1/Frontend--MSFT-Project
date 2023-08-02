@@ -1,13 +1,8 @@
 import React, { useState } from "react";
 import './login.css';
 import axios from 'axios';
-function Enter_Button() {
-
-}
-import { sample } from "underscore";
 import { useNavigate } from "react-router-dom";
-
-
+ 
 export default function Login() {
     const sample = require('./temp.json');
     console.log(sample);
