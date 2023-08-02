@@ -1,3 +1,18 @@
+@import url('https://fonts.cdnfonts.com/css/common-pixel');
+@import url('https://fonts.cdnfonts.com/css/ds-digital');
+@import url('https://fonts.cdnfonts.com/css/dollar-bill');
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@800&family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Poppins:wght@500&display=swap');
+
+.all{
+    /* font-family: 'Orbitron', sans-serif; */
+
+    /* font-family: 'Oswald', sans-serif; */
+font-family: 'Poppins', sans-serif;
+}
+
+
+
 .profile_card{
 
 width: 50%;
@@ -13,7 +28,14 @@ margin: 1%;
 border-radius: 16px;
 background: #B2EDD3;
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-font-family: "Lucida Console", "Courier New", monospace;
+/* font-family: "Lucida Console", "Courier New", monospace; */
+/* font-family: 'DS-Digital', sans-serif; */
+
+/* font-family: 'Handjet', cursive; */
+/* font-family: 'Orbitron', sans-serif; */
+
+
+
 line-height: 200% ;
 
 }
@@ -68,8 +90,15 @@ line-height: 200% ;
     border-radius: 16px;
     background: #B2EDD3;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    font-family: "Lucida Console", "Courier New", monospace;
+    /* font-family: 'Orbitron', sans-serif; */
     line-height: 200% ;
+}
+.header{
+    font-size: 150%;
+    font-weight: bolder;
+    padding: 5px;
+    margin-top: 10px;
+    margin-right: 0px;
 }
 
 .row{

@@ -12,7 +12,7 @@ export default function Card() {
     // console.log(data)    
     
     return (
-    <div>
+    <div className="all">
         <div className="profile_card">
             <div className="left">
             <div className="top_text">
@@ -36,6 +36,9 @@ export default function Card() {
 
 
         <div className="owned_card">
+            <div className="header">
+                Owned 
+            </div>
             <div className="row">
                 <div className="name">
                     MSFT
