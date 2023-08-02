@@ -4,12 +4,15 @@ import axios from 'axios';
 function Enter_Button() {
 
 }
+import { sample } from "underscore";
+import { useNavigate } from "react-router-dom";
 
 
 export default function Login() {
     const sample = require('./temp.json');
     console.log(sample);
-    const [roomId, setRoomId] = useState();
+
+ const [roomId, setRoomId] = useState();
     function Room_ID_Button () {
         axios.get('http://localhost:4000/create-room').then(response => {
              setRoomId(response.data)
@@ -19,8 +22,11 @@ export default function Login() {
           });
     
     }
-    
-    return (
+    const navigate=useNavigate();
+    function Enter_Button() {
+        navigate({pathname: `/games`});
+      }
+    return ( 
         <div className="login">
             <div className="background" >
                 <div className="left-box">
@@ -33,7 +39,7 @@ export default function Login() {
                         </form>
                     </div>
                     <div>
-                        <button className="button_left" type="button" id="myBtn" onclick={Enter_Button()} >Enter</button>
+                        <button className="button_left" type="button" id="myBtn" onClick = {() => Enter_Button()} >Enter</button>
                     </div>
                 </div>
                 <div className="right-box">
