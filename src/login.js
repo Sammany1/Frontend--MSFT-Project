@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import './login.css';
 import { sample } from "underscore";
+import { useNavigate } from "react-router-dom";
 
-function Enter_Button() {
-    
-  }
 
 export default function Login() {
     const sample = require('./temp.json');
     console.log(sample);
     const [ roomId ,setRoomId] = React.useState(0);
+    const navigate=useNavigate();
+    function Enter_Button() {
+        navigate({pathname: `/games`});
+      }
 
     return ( 
         
@@ -25,7 +27,7 @@ export default function Login() {
                         </form>
                     </div>
                     <div>
-                        <button className="button_left" type="button" id="myBtn" onclick = {Enter_Button()} >Enter</button>
+                        <button className="button_left" type="button" id="myBtn" onClick = {() => Enter_Button()} >Enter</button>
                     </div>
                 </div>
                 <div className="right-box">

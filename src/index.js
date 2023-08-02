@@ -2,12 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+
+
+import Login from "./login.js"
+import Card from "./card.js"
+
+import {BrowserRouter,  Routes ,Route} from 'react-router-dom'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+    <Routes>
+    {/* <App/> */}
+    <Route path='/' element={<Login /> }></Route>
+    <Route path='/games' element={<Card/>}></Route>
+    </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
