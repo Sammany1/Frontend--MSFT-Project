@@ -45,7 +45,7 @@ export default function Login() {
                         {roomId != 0 ? <div className="box_output_right">                
                             Your Room ID: {roomId}
                         </div>
-                        : <div>[</div>
+                        : <div></div>
                         }
                         
                         <div >
