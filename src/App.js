@@ -15,7 +15,7 @@ function App() {
     <div>
       <div className="App">
         {/* <Login /> */}
-        {/* <Card /> */}
+        <Card />
       </div>
     </div>
 

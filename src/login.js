@@ -11,6 +11,7 @@ export default function Login() {
     const navigate=useNavigate();
     function Enter_Button() {
         navigate({pathname: `/games`});
+    
       }
 
     return ( 
@@ -18,7 +19,7 @@ export default function Login() {
         <div className="login">
             <div className="background" >
                 <div className="left-box">
-                    <div className="box_text_left">
+                    <div className="box_text_left"> 
                         Please Enter Room ID Here
                     </div>
                     <div className="box_input_left">
@@ -34,10 +35,14 @@ export default function Login() {
                     <div className="box_text_right">
                             Create a New Room 
                         </div>
-                        <div className="box_output_right">                
+                        {roomId != 0 ? <div className="box_output_right">                
                             Your Room ID: {roomId}
                         </div>
+                        : <div>[</div>
+                        }
+                        
                         <div >
+
                         <button className="button_right" type="button" id="myBtn" onClick={() => setRoomId(sample.users.random_id)} >
                          Get Room ID
                         </button>
