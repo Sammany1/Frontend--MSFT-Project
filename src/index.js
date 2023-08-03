@@ -6,6 +6,10 @@ import App from './App';
 
 import Login from "./login.js"
 import Card from "./card.js"
+import Market from "./MM.js"
+import Timer2 from "./MM.js"
+import Leaderboard from "./MM.js"
+import Card2 from "./MM.js"
 
 import {BrowserRouter,  Routes ,Route} from 'react-router-dom'
 import reportWebVitals from './reportWebVitals';
