@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import Card from "./card.js"
+// import Card from "./card.js"
 import useState from "./card.js"
 import Login from "./login.js"
 import useStateLogin from "./login.js"
 import { AnimatePresence } from "framer-motion";
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 // import "../public/index.css";
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
   return (
     <div>
       <div className="App">
-      <Timer2 />
+      <Timer2></Timer2>
       <Card></Card>
       <div className='align1'>
         <Market></Market>
@@ -23,7 +24,7 @@ function App() {
     </div>
       <div className="App">
         {/* <Login /> */}
-        {/* <Card /> */}
+      
       </div>
     </div>
 
@@ -31,33 +32,67 @@ function App() {
 }
 
 export default App;
-function Card(props) {
-  const value = 1222
-  const availableamount = 1111
-  const Stocksvalue = 2222
-  const profit = +200
-  const username = 'william'
-  /*useEffect(() => {
-      fetch('https://create-room')
-        .then(response => response.json())
-        .then(json => setData((Rooms[`${code}`])))
-        .catch(error => console.error(error));
-    }, []);*/
 
+ function Card(props) {
+
+  const sample = require('./temp.json');
+  console.log(sample);
+  
+  
+  // console.log(data)    
+  
   return (
-    <div className='card'>
-      <div>
-        welcome <b>{username}</b>, <br></br>
-        your account value is {value}$
+  <div className="all">
+      <div className="profile_card">
+          <div className="left">
+          <div className="top_text">
+          <div className="top_text_header" >
+             Welcome {sample.users.user} <br/>
+          </div>
+          <div className="top_text_sub">
+              your account value is
+          </div>
+          </div>
+          <div className="main_number">
+              ${sample.users.random_id} 
+          </div>
+          </div>
+          <div className="right_text"> 
+              Available Amount = $240 <br/>
+              Stocks Value = $1090.29 <br/> 
+              Profit = + $240
+          </div>
       </div>
-
-      <div className='bottom'>
-        available amount = {availableamount}$ <br></br>
-        Stocks value = {Stocksvalue}$ <br></br>
-        profit = {profit}$
       </div>
-    </div>)
+  )
 }
+// function Card2(props) {
+//   const value = 1222
+//   const availableamount = 1111
+//   const Stocksvalue = 2222
+//   const profit = +200
+//   const username = 'william'
+//   /*useEffect(() => {
+//       fetch('https://create-room')
+//         .then(response => response.json())
+//         .then(json => setData((Rooms[`${code}`])))
+//         .catch(error => console.error(error));
+//     }, []);*/
+
+//   return (
+//     <div className='card'>
+//       <div>
+//         welcome <b>{username}</b>, <br></br>
+//         your account value is {value}$
+//       </div>
+
+//       <div className='bottom'>
+//         available amount = {availableamount}$ <br></br>
+//         Stocks value = {Stocksvalue}$ <br></br>
+//         profit = {profit}$
+//       </div>
+//     </div>)
+// }
 
 
 const Stocksvalue = 2222
