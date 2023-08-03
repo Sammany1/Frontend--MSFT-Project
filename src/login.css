@@ -4,10 +4,15 @@
 .login{
     font-family: 'Orbitron', sans-serif;
     text-align: center;
-    font-family: 'Oswald', sans-serif;
-    font-family: 'Poppins', sans-serif;
+
+
+    /* font-family: 'Oswald', sans-serif; */
+    /* font-family: 'Poppins', sans-serif; */
 
     /* font-family: "Lucida Console", "Courier New", monospace; */
+    
+    /* font-family: Georgia, Times, "Times New Roman", serif; */
+
 
 }
 
@@ -29,30 +34,53 @@
     height: 400px;
 }
 
-.box_text_left{
+.text_left{
 
     color: white;
     transform: translateY(80px);
     margin-bottom: 5px;
     white-space: nowrap; 
-    text-shadow: 2px 2px 5px rgb(74, 90, 126);
-    border-style: solid;
+    text-shadow: 2px 2px 5px rgb(120, 136, 173);
+    /* border-style: solid;
     border-color: rgb(74, 90, 126);
     border-width: 10px;
-    border-collapse: separate;
+    border-collapse: separate; */
     border-radius: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: 150%;
+    font-size: 200%;
     padding:10px;
     margin-left: 10%;
     margin-right: 10%;   
 }
 
-.box_input_left [type=text]{
+.user_input [type=text]{
     padding: 12px 20px;
     margin: 8px 0;
-    transform: translateY(140px) translateX(-100px);
+    transform: translateY(40px) ;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    border: 8px solid #4a5a7e;
+    border-radius: 4px;
+    background-color: #a7bceb;
+    resize: none;
+    padding-left: 20px;
+    transition: width 0.4s ease-in-out;
+    box-sizing: border-box;
+    height: 80px;
+    width: 50%;
+    font-size: 20pt;
+}
+
+.user_input [type=text]:focus {
+    width: 55%;
+}
+
+.id_input [type=text]{
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    transform: translateY(230px) translateX(-85px);
     background-position: 10px 10px;
     background-repeat: no-repeat;
     border: 8px solid #4a5a7e;
@@ -60,31 +88,87 @@
     background-color: #a7bceb;
     resize: none;
     padding-left: 20px;
-    transition: width 0.4s ease-in-out;
+    transition: width 0.3s ease-in-out;
     box-sizing: border-box;
     height: 80px;
     width: 25%;
     font-size: 20pt;
 }
+.id_input [type=text]:focus {
+    width: 27%;
+}
 
 .button_left {
 
-    transform: translateY(50px) translateX(100px);
-    color: rgb(255, 0, 0);
-    display: block;
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 30px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+    transform: translateY(50px) translateX(90px);
+
+    
+    background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 35px;
+  margin: 4px 2px;
+  opacity: 0.8;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  
+  /* background-color: #13aa52;
+  border: 1px solid #13aa52; */
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  /* transform: translateY(0); */
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+
+
+
 }
-/* ----------------------------------------------------------------------------- */
-/* ----------------------------------------------------------------------------- */
+
+.button_left:hover {opacity: 1}
+
+.button_left:hover {
+    box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+    transform: translateY(53px) translateX(90px);
+  }
+  
+  @media (min-width: 768px) {
+    .button-37 {
+      padding: 10px 30px;
+    }
+  }
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
 .right-box{
 
     background-color: rgb(74, 90, 126);
@@ -96,18 +180,19 @@
 .box_text_right{
 
     color: white;
-    transform: translateY(80px);
+    /* transform: translateY(80px); */
+    margin-top: 10%;
     margin-bottom: 40px;
     white-space: nowrap; 
-    text-shadow: 2px 2px 5px rgb(44, 53, 75);
-    border-style: solid;
+    text-shadow: 2px 2px 5px rgb(120, 136, 173);
+    /* border-style: solid;
     border-color: rgb(44, 53, 75);
     border-width: 10px;
     border-collapse: separate;
-    border-radius: 10px;
+    border-radius: 10px; */
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: 150%;
+    font-size: 200%;
     padding:10px;
     margin-left: 10%;
     margin-right: 10%;
@@ -116,7 +201,6 @@
 .box_output_right {
 
     color: white;
-    transform: translateY(180px);
     margin-bottom: 40px;
     white-space: nowrap; 
     text-shadow: 2px 2px 5px rgb(44, 53, 75);
@@ -131,11 +215,10 @@
     padding:10px;
     margin-left: 10%;
     margin-right: 10%;
+    margin-top: 20px;
 }
 
 .button_right {
-
-    transform: translateY(-20px);
     color: rgb(255, 0, 0);
     display: block;
     background-color: #4CAF50;
@@ -146,7 +229,7 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 10px 2px;
     cursor: pointer;
 }
 
