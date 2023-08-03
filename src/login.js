@@ -1,21 +1,28 @@
 import React, { useState } from "react";
 import './login.css';
-import { sample } from "underscore";
+import axios from 'axios';
 import { useNavigate } from "react-router-dom";
-
-
+ 
 export default function Login() {
     const sample = require('./temp.json');
     console.log(sample);
-    const [ roomId ,setRoomId] = React.useState(0);
+
+ const [roomId, setRoomId] = useState();
+    function Room_ID_Button () {
+        axios.get('http://localhost:4000/create-room').then(response => {
+             setRoomId(response.data)
+          })
+          .catch(error => {
+            console.error(error);
+          });
+    
+    }
     const navigate=useNavigate();
     function Enter_Button() {
         navigate({pathname: `/games`});
     
       }
-
     return ( 
-        
         <div className="login">
             <div className="background" >
                 <div className="left-box">
@@ -48,8 +55,8 @@ export default function Login() {
                         </button>
                     </div>
                 </div>
-            </div>    
-         
+            </div>
+
         </div>
     );
 }
