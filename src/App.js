@@ -19,16 +19,19 @@ export default function App() {
     <div>
       <div className="App">
       <Timer2></Timer2>
+      <div className='align1'>
       <Card></Card>
+
+      </div>
       <div className='align1'>
         <Market></Market>
         <Leaderboard></Leaderboard>
       </div>
-    </div>
       <div className="App">
         {/* <Login /> */}
       
       </div>
+    </div>
     </div>
 
   );

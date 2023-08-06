@@ -35,7 +35,7 @@ function Card2(props) {
 
 const Stocksvalue = 2222
 
-
+/*
 function Market(props) {
 
   let [APPLbuy, setAPPLB] = useState(false)
@@ -98,10 +98,12 @@ function Market(props) {
         </div>
       </div>
 
-      <div className='count1'>
+      <>
         <div className='numstock'>
           <b>Number of stocks</b><br></br>
         </div>
+        
+        <div className='count1'>
         <form action='#'>
           <select id='number-dd' name='number'>
             <option value=''></option>
@@ -138,7 +140,7 @@ function Market(props) {
             </select>
           </div>
         </form>
-      </div>
+      </div></>
       <div className=' button'>
         <div className='APPL'>
 
@@ -211,24 +213,8 @@ function Market(props) {
     </div>
   )
 
-}
+}*/
 function Leaderboard(_props) {
-  /*  <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
-  <link
-  href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
-  rel="stylesheet"
-  />
-  </head>*/
-
-  /*<label for="quantity">Quantity (between 1 and 5):</label>
-  <input type="number" id="quantity" name="quantity" min="1" max="5">
-  </input>*/
-
   return (
     <body>
       <main>
@@ -287,7 +273,7 @@ function Timer2(props){
   }, []);
 
   return (
-    <div>
+    <div className="timer">
       <h1>Time left: {count}</h1>
     </div>
   );
