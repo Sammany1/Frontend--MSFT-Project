@@ -17,40 +17,55 @@
     .align2{
       display: flex;
       flex-direction: row;
+  
     }
     .align1{
       display: flex;
       flex-direction: row;
+      align-items: end;
+
+
+    }
+    .alignm{
+      display: flexbox;
+      flex-direction: column;
+     align-items: end;
     }
     .market{
       display:flex;
       flex-direction: row;
-      width: 60%;
+      width: 700px;
       flex-shrink: 0;
       border-radius: 16px;
       background: linear-gradient(180deg, rgba(245, 230, 230, 0.48) 0%, rgba(217, 217, 217, 0.00) 100%);
       color: #282c34;
-      margin-top: 0%; 
-      margin-left: 6%;
-      margin-bottom: 0%;
-      margin-right: 4%;
-      padding: 2%;
-      padding-top:2%;
-      padding-bottom: 5%;
+      margin-top: 0px; 
+      margin-left: 20px;
+      margin-bottom: 0px;
+      margin-right: 4px;
+      padding: 1px;
+      padding-top:2px;
+      padding-bottom: 5px;
+      padding-left: 28px;
     #container { overflow: hidden; }
     #floated-imgs { float: right; }
     #floated-imgs img {display: block; }
+
+    .marketheader{
+      padding-top: 10px;
+    }
     .appl{
-      padding-top: 40%;
+      padding-top: 30%;
     }
     .amzn{
-      padding-top: 40%;
+      padding-top: 60%;
     }
     .ibmp{
-      padding-top: 50%;
+      padding-top: 60%;
+      padding-left: 10px;
     }
     .msft{
-      padding-top: 55%;
+      padding-top: 42%;
     }
     .names{
       display:flex;
@@ -63,54 +78,55 @@
     }
     .apple{
       color: #282c34;
-      padding-left: 20%;
-      padding-top: 40%;
+      padding-left: 50px;
+      padding-top: 53px;
     }
     }
     
     .amazon{
       color: #282c34;
-      padding-left: 20%;
-      padding-top: 58%;
+      padding-left: 50px;
+      padding-top: 48px;
     }
     
     .ibm{
       color: #282c34;
-      padding-left: 20%;
-      padding-top: 85%;
+      padding-left: 50px;
+      padding-top: 53px;
     }
     
     .microsoft{
       color: #282c34;
-      padding-left: 20pt;
-      padding-top: 40pt;
+      padding-left: 50px;
+      padding-top: 45px;
     }
     
     .numstock{
-    color: #6C757D;
-    font-family: Inter;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-top: 0px;
-    margin-left: 12px;
+      color: #6C757D;
+      font-family: Inter;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      padding-left: px;
+      padding-bottom: 7px;
+      padding-top: 20px;
     }
     .count1{
-    margin-top: 3px;
-    margin-left: 12px;
+      padding-left: 50px;
+      padding-top: 4px;
     }
     
     .count2{
-      margin-top: 33px;
+      margin-top: 43px;
       margin-left: 0px;
     }
     .count3{
-      margin-top: 50px;
+      margin-top: 48px;
       margin-left: 0px;
     }
     .count4{
-      margin-top: 48px;
+      margin-top: 43px;
       margin-left: 0px;
     }
     
@@ -121,22 +137,25 @@
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+      padding-left: 50px;
+      padding-top: 4px;
+      padding-top: 23px;
     }
     .stocksvalue1{
-      margin-left: 2px;
-      margin-top: 3px;
+      padding-left: 50px;
+      padding-top: 8px;
     }
     .stocksvalue2{
-      margin-left: 2px;
-      margin-top: 34px;
+      padding-left: 50px;
+      padding-top: 45px;
     }
     .stocksvalue3{
-      margin-left: 2px;
-      margin-top: 52px;
+      padding-left: 50px;
+      padding-top: 48px;
     }
     .stocksvalue4{
-      margin-left: 2px;
-      margin-top: 48px;
+      padding-left: 50px;
+      padding-top: 43px;
     }
     
     .button {
@@ -151,20 +170,21 @@
       transition-duration: 0.4s;
       cursor: pointer;
       border-radius: 100px;
+      margin-left: 50px;
       
     }
     
     .APPL{
-      margin-top: 7px;
+      margin-top: 35px;
     }
     .AMZN{
-      margin-top: 30px;
+      margin-top: 40px;
     }
     .IBM{
       margin-top: 46px;
     }
     .MSFT{
-      margin-top: 48px;
+      margin-top: 40px;
     }
     .buy{
       background-color: white;
@@ -227,17 +247,20 @@
       color:#008CBA;
     }*/
     
-    .container{
+    .containerL{
       display:flex;
       flex-direction: column;
       flex-shrink: 0;
       padding-bottom: 5px;
-      justify-content: start;
+
       font-size: 62, 5%;
       box-sizing: border-box;
       margin: 0;
       background-color:#bfbff9;
       border-radius: 12px;
+      width: 280px;
+      padding-left: 20px;
+      margin-bottom: 20px;
     }
      
       .leaderboard{
@@ -252,7 +275,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-right: 5%;
+        margin-right: 0;
       }
       
       main {
@@ -275,7 +298,8 @@
         justify-content: space-between;
         padding: 2.5rem 2rem;
         color: #141a39;
-        margin-right: 5%;
+        padding-top: 0px;
+        padding-bottom: 0px;
       }
       
     
@@ -286,13 +310,11 @@
         color:#141a39;
         text-transform: uppercase;
         cursor: default;
-        margin-right: 5%;
       }
       
       #leaderboard {
         width: 100%;
         position: relative;
-        margin-right: 5%;
       }
       
       table {
@@ -301,13 +323,11 @@
         table-layout: fixed;
         color: #141a39;
         cursor: default;
-        margin-right: 5%;
       }
       
       tr {
         transition: all 0.2s ease-in-out;
         border-radius: 0.2rem;
-        margin-right: 5%;
       }
       
       tr:not(:first-child):hover {
@@ -315,17 +335,16 @@
         transform: scale(1.1);
         -webkit-box-shadow: 0px 5px 15px 8px #e4e7fb;
         box-shadow: 0px 5px 15px 8px #e4e7fb;
-        margin-right: 5%;
       }
       
       tr:nth-child(odd) {
         background-color: #bfbff9;
-        margin-right: 5%;
+
       }
       
       tr:nth-child(1) {
         color:#141a39;
-        margin-right: 5%;
+
       }
       
       td {
@@ -334,21 +353,20 @@
         font-size: 1.4rem;
         padding: 1rem 2rem;
         position: relative;
-        margin-right: 5%;
+  
       }
       
-      .number {
+      .numberL {
         width: 1rem;
         font-size: 2.2rem;
         font-weight: bold;
         text-align: left;
-        margin-right: 5%;
       }
       
-      .name {
+      .nameL {
         text-align: left;
         font-size: 1.2rem;
-        margin-right: 5%;
+
       }
       
       .points {
@@ -357,18 +375,17 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        margin-right: 5%;
+ 
       }
       
       .points:first-child {
         width: 10rem;
-        margin-right: 5%;
+     
       }
       
       .gold-medal {
-        height: 3rem;
-        margin-left: 1.5rem;
-        margin-right: 5%;
+        height: 0rem;
+        margin-left: 0rem;
       }
       
       .ribbon {
@@ -415,3 +432,10 @@
         margin: 0;
         font-family: verdana;
       }
+
+.timer{
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  font-size: 1.4rem;
+  color:#141a39;
+}
