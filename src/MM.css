@@ -54,6 +54,26 @@
     .marketheader{
       padding-top: 10px;
     }
+
+
+
+    .graphs{
+        margin-top: 30px;
+        width: 20%;
+        height: 200px;
+        padding: 10px;
+
+    }
+    .graph{
+      
+      height: 60px;
+    }
+
+
+
+
+
+
     .appl{
       padding-top: 40%;
     }
