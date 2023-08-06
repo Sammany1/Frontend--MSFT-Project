@@ -4,12 +4,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@800&family=Orbitron:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Poppins:wght@500&display=swap');
 
-.all{
-    font-family: 'Orbitron', sans-serif;
+/* .allC{ */
+    /* font-family: 'Orbitron', sans-serif; */
 
     /* font-family: 'Oswald', sans-serif; */
 /* font-family: 'Poppins', sans-serif; */
-}
+/* } */
 
 
 
@@ -45,26 +45,26 @@ padding-right: 22.5px;
 }
 
 
-.main_number {
+.main_numberC {
     padding-left: 150px;
     padding-top: 10px;
     color: black;
     font-size: 30px;
     font-weight: bold;
 }
-.top_text{
+.top_textC{
     display: flex;
     flex-direction: column;
 }
-.top_text_header {
+.top_text_headerC {
     font-size: large;
     font-weight: bold;
 }
-.top_text_sub{
+.top_text_subC{
     font-size: small;
 }
 
-.right_text{
+.right_textC{
     margin-left: auto;
     line-height: 40px;
     padding: 10px;

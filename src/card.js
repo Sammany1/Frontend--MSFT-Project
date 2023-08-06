@@ -31,22 +31,22 @@ export default function card() {
         // console.log(data)    
 
         return (
-            <div className="all">
+            <div className="allC">
                 <div className="profile_card">
-                    <div className="left">
-                        <div className="top_text">
-                            <div className="top_text_header" >
+                    <div className="leftC">
+                        <div className="top_textC">
+                            <div className="top_text_headerC" >
                                 Welcome {sample.users.user} <br />
                             </div>
-                            <div className="top_text_sub">
+                            <div className="top_text_subC">
                                 your account value is
                             </div>
                         </div>
-                        <div className="main_number">
+                        <div className="main_numberC">
                             ${sample.users.random_id}
                         </div>
                     </div>
-                    <div className="right_text">
+                    <div className="right_textC">
                         Available Amount = $240 <br />
                         Stocks Value = $1090.29 <br />
                         Profit = + $240
@@ -139,14 +139,14 @@ export default function card() {
                         </div>
 
                         <div className='amzn'>
-                            <img width="50" height="50" src="https://1000logos.net/wp-content/uploads/2016/10/Amazon-Logo-768x480.png"></img>
+                            <img width="30" height="30" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Amazon_icon.svg/900px-Amazon_icon.svg.png?20210720180728"></img>
                         </div>
                         <div className='ibmp'>
-                        <img width="25" height="25" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/2560px-IBM_logo.svg.png"></img>
+                        <img width="35" height="15" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/2560px-IBM_logo.svg.png"></img>
                         </div>
 
                         <div className='msft'>
-                            <img width="50" height="50" src="https://www.freepnglogos.com/uploads/microsoft-logo-small-29.png"></img>
+                            <img width="30" height="30" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQsVlN9UWq_VPsPuu7RiId5muc3QZfOk3MKibumRASwtXhR21hc"></img>
                         </div>
                     </div>
                 </div>
@@ -187,16 +187,18 @@ export default function card() {
                         <b>Number of stocks</b><br></br>
                     </div>
                     <form action='#'>
-                        <select id='number-dd' name='number'>
-                            <option value=''></option>
-                            <option value='one'>1</option>
-                            <option value='two'>2</option>
-                            <option value='three'>3</option>
-                            <option value='four'>4</option>
-                        </select>
+                    <div className='count1'>
+                            <select className="dropbtn">    
+                                <option value=''>action</option>
+                                <option value='one'>1</option>
+                                <option value='two'>2</option>
+                                <option value='three'>3</option>
+                                <option value='four'>4</option>
+                            </select>
+                        </div>
                         <div className='count2'>
-                            <select id='number-dd' name='number'>
-                                <option value=''></option>
+                            <select className="dropbtn">    
+                                <option value=''>action</option>
                                 <option value='one'>1</option>
                                 <option value='two'>2</option>
                                 <option value='three'>3</option>
@@ -204,8 +206,8 @@ export default function card() {
                             </select>
                         </div>
                         <div className='count3'>
-                            <select id='number-dd' name='number'>
-                                <option value=''></option>
+                            <select className="dropbtn">    
+                                <option value=''>action</option>
                                 <option value='one'>1</option>
                                 <option value='two'>2</option>
                                 <option value='three'>3</option>
@@ -213,8 +215,8 @@ export default function card() {
                             </select>
                         </div>
                         <div className='count4'>
-                            <select id='number-dd' name='number'>
-                                <option value=''></option>
+                            <select className="dropbtn">    
+                                <option value=''>action</option>
                                 <option value='one'>1</option>
                                 <option value='two'>2</option>
                                 <option value='three'>3</option>
@@ -222,6 +224,7 @@ export default function card() {
                             </select>
                         </div>
                     </form>
+                    
                 </div>
                 <div className=' button'>
                     <div className='APPL'>
