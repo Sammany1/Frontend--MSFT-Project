@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import ChartExample from "./chart.js"
+
 import App from './App';
 
 
@@ -20,7 +22,7 @@ root.render(
     <BrowserRouter>
     <Routes>
     {/* <App/> */}
-    <Route path='/' element={<Login /> }></Route>
+    <Route path='/' element={<App /> }></Route>
     <Route path='/games' element={<Card/>}></Route>
     </Routes>
     </BrowserRouter>
