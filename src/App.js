@@ -1,7 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import Card from "./card.js"
+import ChartExample from "./chart.js"
 import useState from "./card.js"
+
 import Login from "./login.js"
 import Market from "./MM.js"
 import Timer2 from "./MM.js"
@@ -18,7 +20,10 @@ export default function App() {
   return (
     <div>
       <div className="App">
-      <Timer2></Timer2>
+        {/* <ChartExample></ChartExample> */}
+        {/* <Login></Login> */}
+        <Card></Card>
+      {/* <Timer2></Timer2>
       <div className='align1'>
       <Card></Card>
 
@@ -28,9 +33,9 @@ export default function App() {
         <Leaderboard></Leaderboard>
       </div>
       <div className="App">
-        {/* <Login /> */}
+        <Login />
       
-      </div>
+      </div> */}
     </div>
     </div>
 
