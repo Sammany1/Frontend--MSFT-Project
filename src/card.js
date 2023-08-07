@@ -1,4 +1,9 @@
 import React from "react";
+import ChartExample from "./chart2.js"
+import ChartExample_appl from "./chart_appl.js"
+import ChartExample_amzn from "./chart_amzn.js"
+import ChartExample_ibm from "./chart_ibm.js"
+import ChartExample_msft from "./chart_msft.js"
 import './card.css';
 
 import { useState, useEffect } from "react";
@@ -149,6 +154,27 @@ export default function card() {
                             <img width="30" height="30" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQsVlN9UWq_VPsPuu7RiId5muc3QZfOk3MKibumRASwtXhR21hc"></img>
                         </div>
                     </div>
+                    
+                </div>
+                <div className="graphs">
+                    <div className="graph">
+                    <ChartExample_appl></ChartExample_appl>
+                    </div>
+                    <div className="graph">
+                    <ChartExample_amzn></ChartExample_amzn>
+                    </div>
+                    <div className="graph">
+                    <ChartExample_ibm></ChartExample_ibm>
+                    </div>
+                    <div className="graph">
+                    <ChartExample_msft></ChartExample_msft>
+                    </div>
+
+
+
+
+
+
                 </div>
                 <div className='names'>
                     <div className='apple'>
