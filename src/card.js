@@ -9,6 +9,7 @@ import './card.css';
 import { useState, useEffect } from "react";
 
 export default function card() {
+    
     return (
 
         <>
@@ -155,59 +156,59 @@ export default function card() {
         );
     }
     function Owned(props) {
-        return(
-        <div className="owned_card">
-            <div className="headerO">
-                Owned
-            </div>
-            <div className="row">
-                <div className="nameO">
-                    APPL
+        return (
+            <div className="owned_card">
+                <div className="headerO">
+                    Owned
                 </div>
-                <div className="status">
-                    +9.77%
-                </div>
-                <div className="owned">
-                    $10000$
-                </div>
+                <div className="row">
+                    <div className="nameO">
+                        APPL
+                    </div>
+                    <div className="status">
+                        +9.77%
+                    </div>
+                    <div className="owned">
+                        $10000$
+                    </div>
 
-            </div>
-            <div className="row">
-                <div className="nameO">
-                    AMZN
                 </div>
-                <div className="status">
-                    +9.77%
+                <div className="row">
+                    <div className="nameO">
+                        AMZN
+                    </div>
+                    <div className="status">
+                        +9.77%
+                    </div>
+                    <div className="owned">
+                        $10000$
+                    </div>
                 </div>
-                <div className="owned">
-                    $10000$
+                <div className="row">
+                    <div className="nameO">
+                        IBM
+                    </div>
+                    <div className="status">
+                        +9.77%
+                    </div>
+                    <div className="owned">
+                        $10000$
+                    </div>
                 </div>
-            </div>
-            <div className="row">
-                <div className="nameO">
-                    IBM
+                <div className="row">
+                    <div className="nameO">
+                        MSFT
+                    </div>
+                    <div className="status">
+                        +9.77%
+                    </div>
+                    <div className="owned">
+                        $10000$
+                    </div>
                 </div>
-                <div className="status">
-                    +9.77%
-                </div>
-                <div className="owned">
-                    $10000$
-                </div>
-            </div>
-            <div className="row">
-                <div className="nameO">
-                    MSFT
-                </div>
-                <div className="status">
-                    +9.77%
-                </div>
-                <div className="owned">
-                    $10000$
-                </div>
-            </div>
-        </div>)
+            </div>)
     }
-   function Market(props) {
+    function Market(props) {
         const Stocksvalue = 99;
         let [APPLbuy, setAPPLB] = useState(false)
         let [APPLsell, setAPPLS] = useState(false)
@@ -221,7 +222,7 @@ export default function card() {
             <div className='market'>
                 <div id="container">
                     <div className="marketheader">
-                      <b>Market</b>
+                        <b>Market</b>
                     </div>
                     <div id="floated-imgs">
                         <div className='appl'>
@@ -232,35 +233,16 @@ export default function card() {
                             <img width="30" height="30" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Amazon_icon.svg/900px-Amazon_icon.svg.png?20210720180728"></img>
                         </div>
                         <div className='ibmp'>
-                        <img width="35" height="15" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/2560px-IBM_logo.svg.png"></img>
+                            <img width="35" height="15" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/2560px-IBM_logo.svg.png"></img>
                         </div>
 
                         <div className='msft'>
                             <img width="30" height="30" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQsVlN9UWq_VPsPuu7RiId5muc3QZfOk3MKibumRASwtXhR21hc"></img>
                         </div>
                     </div>
-                    
-                </div>
-                <div className="graphs">
-                    <div className="graph">
-                    <ChartExample_appl></ChartExample_appl>
-                    </div>
-                    <div className="graph">
-                    <ChartExample_amzn></ChartExample_amzn>
-                    </div>
-                    <div className="graph">
-                    <ChartExample_ibm></ChartExample_ibm>
-                    </div>
-                    <div className="graph">
-                    <ChartExample_msft></ChartExample_msft>
-                    </div>
-
-
-
-
-
 
                 </div>
+
                 <div className='names'>
                     <div className='apple'>
                         <b>APPL</b>
@@ -298,44 +280,25 @@ export default function card() {
                         <b>Number of stocks</b><br></br>
                     </div>
                     <form action='#'>
-                    <div className='count1'>
-                            <select className="dropbtn">    
-                                <option value=''>action</option>
-                                <option value='one'>1</option>
-                                <option value='two'>2</option>
-                                <option value='three'>3</option>
-                                <option value='four'>4</option>
-                            </select>
+                        <div className='count1'>
+                            <input type="number" id="count1" name="count1" min="0" max="10" />
                         </div>
                         <div className='count2'>
-                            <select className="dropbtn">    
-                                <option value=''>action</option>
-                                <option value='one'>1</option>
-                                <option value='two'>2</option>
-                                <option value='three'>3</option>
-                                <option value='four'>4</option>
-                            </select>
+
+                            <input type="number" id="count1" name="count1" min="0" max="10" />
                         </div>
+
                         <div className='count3'>
-                            <select className="dropbtn">    
-                                <option value=''>action</option>
-                                <option value='one'>1</option>
-                                <option value='two'>2</option>
-                                <option value='three'>3</option>
-                                <option value='four'>4</option>
-                            </select>
+
+                            <input type="number" id="count1" name="count1" min="0" max="10" />
+
                         </div>
                         <div className='count4'>
-                            <select className="dropbtn">    
-                                <option value=''>action</option>
-                                <option value='one'>1</option>
-                                <option value='two'>2</option>
-                                <option value='three'>3</option>
-                                <option value='four'>4</option>
-                            </select>
+
+                            <input type="number" id="count1" name="count1" min="0" max="10" />
                         </div>
                     </form>
-                    
+
                 </div>
                 <div className=' button'>
                     <div className='APPL'>
@@ -410,48 +373,90 @@ export default function card() {
         )
 
     }
-    function Leaderboard(_props) {
+    // function Leaderboard(_props) {
 
-        return (
-            <body>
-                <main>
-                    <div className='containerL'>
-                        <div id="header">
-                            <h1>Ranking</h1>
-                        </div>
-                        <div id="leaderboard">
-                            <div class="ribbon"></div>
-                            <table>
-                                <tr>
-                                    <td class="numberL">1</td>
-                                    <td class="nameL">player 1</td>
-                                    <td class="points">
-                                        258.244 <img class="gold-medal" src="https://github.com/malunaridev/Challenges-iCodeThis/blob/master/4-leaderboard/assets/gold-medal.png?raw=true" alt="gold medal" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="numberL">2</td>
-                                    <td class="nameL">player 2</td>
-                                    <td class="points">258.242</td>
-                                </tr>
-                                <tr>
-                                    <td class="numberL">3</td>
-                                    <td class="nameL">player 3</td>
-                                    <td class="points">258.223</td>
-                                </tr>
-                                <tr>
-                                    <td class="numberL">4</td>
-                                    <td class="nameL">player 4</td>
-                                    <td class="points">258.212</td>
-                                </tr>
-                            </table>
+    //     return (
+    //         <body>
+    //             <main>
+    //                 <div className='containerL'>
+    //                     <div id="header">
+    //                         <h1>Ranking</h1>
+    //                     </div>
+    //                     <div id="leaderboard">
+    //                         <div class="ribbon"></div>
+    //                         <table>
+    //                             <tr>
+    //                                 <td class="numberL">1</td>
+    //                                 <td class="nameL">player 1</td>
+    //                                 <td class="points">
+    //                                     258.244 <img class="gold-medal" src="https://github.com/malunaridev/Challenges-iCodeThis/blob/master/4-leaderboard/assets/gold-medal.png?raw=true" alt="gold medal" />
+    //                                 </td>
+    //                             </tr>
+    //                             <tr>
+    //                                 <td class="numberL">2</td>
+    //                                 <td class="nameL">player 2</td>
+    //                                 <td class="points">258.242</td>
+    //                             </tr>
+    //                             <tr>
+    //                                 <td class="numberL">3</td>
+    //                                 <td class="nameL">player 3</td>
+    //                                 <td class="points">258.223</td>
+    //                             </tr>
+    //                             <tr>
+    //                                 <td class="numberL">4</td>
+    //                                 <td class="nameL">player 4</td>
+    //                                 <td class="points">258.212</td>
+    //                             </tr>
+    //                         </table>
 
-                        </div></div>
-                </main>
-            </body>
+    //                     </div></div>
+    //             </main>
+    //         </body>
 
-        )
-    }
+    //     )
+    // }
+
+function Leaderboard(props){
+   
+   return( <>
+<body>
+	<div class="container2">
+		<div class="leaderboard">
+			<div class="head">
+				<i class="fas fa-crown"></i>
+				<h1>Leaderboard</h1>
+			</div>
+			<div class="body">
+				<ol>
+					<li>
+						<mark>Jerry Wood</mark>
+						<small>948</small>
+					</li>
+					<li>
+						<mark>Brandon Barnes</mark>
+						<small>750</small>
+					</li>
+					<li>
+						<mark>Raymond Knight</mark>
+						<small>684</small>
+					</li>
+					<li>
+						<mark>Trevor McCormick</mark>
+						<small>335</small>
+					</li>
+					<li>
+						<mark>Andrew Fox</mark>
+						<small>296</small>
+					</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</body>
+</>
+   )
+}
+
 
     function Timer2(props) {
         const [count, setCount] = useState(60);
