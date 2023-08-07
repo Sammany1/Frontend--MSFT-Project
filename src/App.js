@@ -21,8 +21,8 @@ export default function App() {
     <div>
       <div className="App">
         {/* <ChartExample></ChartExample> */}
-        {/* <Login></Login> */}
-        <Card></Card>
+        <Login></Login>
+        {/* <Card></Card> */}
       {/* <Timer2></Timer2>
       <div className='align1'>
       <Card></Card>
