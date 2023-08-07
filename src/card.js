@@ -189,7 +189,7 @@ export default function card() {
                     <form action='#'>
                     <div className='count1'>
                             <select className="dropbtn">    
-                                <option value=''>action</option>
+                                <option value=''>no stocks</option>
                                 <option value='one'>1</option>
                                 <option value='two'>2</option>
                                 <option value='three'>3</option>
@@ -198,7 +198,7 @@ export default function card() {
                         </div>
                         <div className='count2'>
                             <select className="dropbtn">    
-                                <option value=''>action</option>
+                                <option value=''>no stocks</option>
                                 <option value='one'>1</option>
                                 <option value='two'>2</option>
                                 <option value='three'>3</option>
@@ -207,7 +207,7 @@ export default function card() {
                         </div>
                         <div className='count3'>
                             <select className="dropbtn">    
-                                <option value=''>action</option>
+                                <option value=''>no stocks</option>
                                 <option value='one'>1</option>
                                 <option value='two'>2</option>
                                 <option value='three'>3</option>
@@ -216,7 +216,7 @@ export default function card() {
                         </div>
                         <div className='count4'>
                             <select className="dropbtn">    
-                                <option value=''>action</option>
+                                <option value=''>no stocks</option>
                                 <option value='one'>1</option>
                                 <option value='two'>2</option>
                                 <option value='three'>3</option>
