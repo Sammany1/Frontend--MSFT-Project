@@ -25,24 +25,21 @@ export default function card() {
                     <Leaderboard></Leaderboard>
                 </div>
                 <div className='bottom'>
-                    <Buy_Sell_Amount></Buy_Sell_Amount>                    
+                    {/* <AAPL_Buy_Sell_Amount></AAPL_Buy_Sell_Amount> */}
+                    {/* <AMZN_Buy_Sell_Amount></AMZN_Buy_Sell_Amount>    */}
+                    {/* <IBM_Buy_Sell_Amount></IBM_Buy_Sell_Amount>      */}
+                    <MSFTL_Buy_Sell_Amount></MSFTL_Buy_Sell_Amount>       
                 </div>
 
             </div>
         </>
     );
 
-    function Buy_Sell_Amount(){
+    function AAPL_Buy_Sell_Amount(){
         
-        const Stocksvalue = 99;
+        const Stocksvalue_AAPL = 99;
         let [APPLbuy, setAPPLB] = useState(false)
         let [APPLsell, setAPPLS] = useState(false)
-        let [AMZNbuy, setAMZNB] = useState(false)
-        let [AMZNsell, setAMZNS] = useState(false)
-        let [IBMbuy, setIBMB] = useState(false)
-        let [IBMsell, setIBMS] = useState(false)
-        let [MSFTbuy, setMSFTB] = useState(false)
-        let [MSFTsell, setMSFTS] = useState(false)
         
         return (
 
@@ -61,15 +58,158 @@ export default function card() {
                             <button onClick={() => setAPPLB(APPLbuy = false)} className='BUY'>BUY</button>
                             :
                             <button onClick={() => {
-                                setAPPLS(AMZNsell = false)
+                                setAPPLS(APPLbuy = false)
                                 setAPPLB(APPLbuy = true)
                             }} className='buy'>BUY</button>
                         }
                         {APPLsell ?
                             <button onClick={() => setAPPLS(APPLsell = false)} className='SELL'>SELL</button> :
                             <button onClick={() => {
-                                setAPPLB(APPLbuy = false)
+                                setAPPLB(APPLsell = false)
                                 setAPPLS(APPLsell = true)
+                            }} className='sell'>SELL</button>
+                        }
+                        
+                    </div>
+                        
+                    
+                </div>
+                    
+            </div>
+        </div>
+
+        )
+    }
+
+    function AMZN_Buy_Sell_Amount(){
+        
+        const Stocksvalue_AMZN = 99;
+        let [AMZNbuy, setAMZNB] = useState(false)
+        let [AMZNsell, setAMZNS] = useState(false)
+
+        
+        return (
+
+        <div>
+            <div className="bottom_row">
+                <div className=' button'>
+                    <div className='APPL'>
+
+                    <div className="amount_input">   
+                            <form action="/url" method="GET">
+                                 <input type="text" id="xxx" name="xxxxd" placeholder="1234.."></input>
+                            </form>
+                        </div>
+
+                        {AMZNbuy ?
+                            <button onClick={() => setAMZNB(AMZNbuy = false)} className='BUY'>BUY</button>
+                            :
+                            <button onClick={() => {
+                                setAMZNS(AMZNbuy = false)
+                                setAMZNB(AMZNbuy = true)
+                            }} className='buy'>BUY</button>
+                        }
+                        {AMZNsell ?
+                            <button onClick={() => setAMZNS(AMZNsell = false)} className='SELL'>SELL</button> :
+                            <button onClick={() => {
+                                setAMZNB(AMZNsell = false)
+                                setAMZNS(AMZNsell = true)
+                            }} className='sell'>SELL</button>
+                        }
+                        
+                    </div>
+                        
+                    
+                </div>
+                    
+            </div>
+        </div>
+
+        )
+    }
+
+    function IBM_Buy_Sell_Amount(){
+        
+        const Stocksvalue_IBM = 99;
+       
+        
+        let [IBMbuy, setIBMB] = useState(false)
+        let [IBMsell, setIBMS] = useState(false)
+
+        
+        
+        return (
+
+        <div>
+            <div className="bottom_row">
+                <div className=' button'>
+                    <div className='APPL'>
+
+                    <div className="amount_input">   
+                            <form action="/url" method="GET">
+                                 <input type="text" id="xxx" name="xxxxd" placeholder="1234.."></input>
+                            </form>
+                        </div>
+
+                        {IBMbuy ?
+                            <button onClick={() => setIBMB(IBMbuy = false)} className='BUY'>BUY</button>
+                            :
+                            <button onClick={() => {
+                                setIBMS(IBMsell = false)
+                                setIBMB(IBMbuy = true)
+                            }} className='buy'>BUY</button>
+                        }
+                        {IBMsell ?
+                            <button onClick={() => setIBMS(IBMsell = false)} className='SELL'>SELL</button> :
+                            <button onClick={() => {
+                                setIBMB(IBMbuy = false)
+                                setIBMS(IBMsell = true)
+                            }} className='sell'>SELL</button>
+                        }
+                        
+                    </div>
+                        
+                    
+                </div>
+                    
+            </div>
+        </div>
+
+        )
+    }
+
+    function MSFTL_Buy_Sell_Amount(){
+        
+        const Stocksvalue_MSFT = 99;
+        let [MSFTbuy, setMSFTB] = useState(false)
+        let [MSFTsell, setMSFTS] = useState(false)
+        
+        return (
+
+        <div>
+            <div className="bottom_row">
+                <div className=' button'>
+                    <div className='APPL'>
+
+                    <div className="amount_input">   
+                            <form action="/url" method="GET">
+                                 <input type="text" id="xxx" name="xxxxd" placeholder="1234.."></input>
+                            </form>
+                        </div>
+
+                        {MSFTbuy ?
+                            <button onClick={() => setMSFTB(MSFTbuy = false)} className='BUY'>BUY</button>
+                            :
+                            <button onClick={() => {
+                                setMSFTS(MSFTsell = false)
+                                setMSFTB(MSFTbuy = true)
+                            }} className='buy'>BUY</button>
+                        }
+                        {MSFTsell ?
+                            <button onClick={() => setMSFTS(MSFTsell = false)} className='SELL'>SELL</button> :
+                            <button onClick={() => {
+                                setMSFTB(MSFTbuy = false)
+                                setMSFTS(MSFTsell = true)
                             }} className='sell'>SELL</button>
                         }
                         
