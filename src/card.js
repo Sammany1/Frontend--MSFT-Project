@@ -9,7 +9,6 @@ import './card.css';
 import { useState, useEffect } from "react";
 
 export default function card() {
-    
     return (
 
         <>
@@ -444,68 +443,69 @@ export default function card() {
                     <div className='APPL'>
 
                         {APPLbuy ?
-                            <button onClick={() => setAPPLB(APPLbuy = false)} className='BUY'>buy</button>
+                            <button onClick={() => setAPPLB(APPLbuy = false)} className='BUY'>Buy</button>
                             :
                             <button onClick={() => {
                                 setAPPLS(AMZNsell = false)
                                 setAPPLB(APPLbuy = true)
-                            }} className='buy'>buy</button>
+                            }} className='buy'>Buy</button>
                         }
                         {APPLsell ?
-                            <button onClick={() => setAPPLS(APPLsell = false)} className='SELL'>sell</button> :
+                            <button onClick={() => setAPPLS(APPLsell = false)} className='SELL'>Sell</button> :
                             <button onClick={() => {
                                 setAPPLB(APPLbuy = false)
                                 setAPPLS(APPLsell = true)
-                            }} className='sell'>sell</button>
+                            }} className='sell'>Sell</button>
                         }
                     </div>
                     <div className='AMZN'>
                         {AMZNbuy ?
-                            <button onClick={() => setAMZNB(AMZNbuy = false)} className='BUY'>buy</button>
+                            <button onClick={() => setAMZNB(AMZNbuy = false)} className='BUY'>Buy</button>
                             :
                             <button onClick={() => {
                                 setAMZNS(AMZNsell = false)
                                 setAMZNB(AMZNbuy = true)
-                            }} className='buy'>buy</button>
+                            }} className='buy'>Buy</button>
                         }
 
                         {AMZNsell ?
-                            <button onClick={() => setAMZNS(AMZNsell = false)} className='SELL'>sell</button> :
+                            <button onClick={() => setAMZNS(AMZNsell = false)} className='SELL'>Sell</button> :
                             <button onClick={() => {
                                 setAMZNB(AMZNbuy = false)
                                 setAMZNS(AMZNsell = true)
-                            }} className='sell'>sell</button>
+                            }} className='sell'>Sell</button>
                         }
                     </div>
                     <div className='IBM'>
                         {IBMbuy ?
-                            <button onClick={() => setIBMB(IBMbuy = false)} className='BUY'>buy</button>
+                            <button onClick={() => setIBMB(IBMbuy = false)} className='BUY'>Buy</button>
                             :
                             <button onClick={() => {
                                 setIBMS(IBMsell = false)
                                 setIBMB(IBMbuy = true)
-                            }} className='buy'>buy</button>
+                            }} className='buy'>Buy</button>
                         }
                         {IBMsell ?
-                            <button onClick={() => setIBMS(IBMsell = false)} className='SELL'>sell</button> :
+                            <button onClick={() => setIBMS(IBMsell = false)} className='SELL'>Sell</button> :
                             <button onClick={() => {
                                 setIBMB(IBMbuy = false)
                                 setIBMS(IBMsell = true)
-                            }} className='sell'>sell</button>
+                            }} className='sell'>Sell</button>
                         }
                     </div>
                     <div className='MSFT'>
                         {MSFTbuy ?
-                            <button onClick={() => setMSFTB(MSFTbuy = false)} className='BUY'>buy</button>
+                            <button onClick={() => setMSFTB(MSFTbuy = false)} className='BUY'>Buy</button>
                             :
                             <button onClick={() => {
                                 setMSFTS(MSFTsell = false)
                                 setMSFTB(MSFTbuy = true)
-                            }} className='buy'>buy</button>
+                            }} className='buy'>Buy</button>
                         }
                         {MSFTsell ?
-                            <button onClick={() => setMSFTS(MSFTsell = false)} className='SELL'>sell</button> :
-                            <button onClick={() => setMSFTS(MSFTsell = true)} className='sell'>sell</button>
+                            <button onClick={() => setMSFTS(MSFTsell = false)} className='SELL'>Sell</button> :
+                            <button onClick={() => {setMSFTB(IBMbuy = false)
+                                setMSFTS(IBMsell = true)}} className='sell'>Sell</button>
                         }
                     </div>
                 </div>
@@ -559,18 +559,21 @@ export default function card() {
 function Leaderboard(props){
    
    return( <>
-<body>
+{/* <body>
 	<div class="container2">
 		<div class="leaderboard">
-			<div class="head">
-				<i class="fas fa-crown"></i>
-				<h1>Leaderboard</h1>
+			<div >
+			    <h1>Leaderboard</h1>
 			</div>
-			<div class="body">
+		</div>
+	</div>
+</body> */}
+   <div className="container3">
+   <div class="body">
 				<ol>
-					<li>
-						<mark>Jerry Wood</mark>
-						<small>948</small>
+					<li><div className="lead">
+						leaderboard
+					</div>
 					</li>
 					<li>
 						<mark>Brandon Barnes</mark>
@@ -589,10 +592,7 @@ function Leaderboard(props){
 						<small>296</small>
 					</li>
 				</ol>
-			</div>
-		</div>
-	</div>
-</body>
+			</div></div>
 </>
    )
 }

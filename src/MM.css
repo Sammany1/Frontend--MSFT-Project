@@ -610,7 +610,7 @@
  * Reference - https://codepen.io/supah/pen/WwrJpw
  */
 
-/* basic */
+/* basic *//*
 *,
 *:before,
 *:after {
@@ -628,8 +628,8 @@ a {
 	display: inline-block;
 	color: #333;
 	text-decoration: none;
-}
-.blog {
+} */
+/* .blog {
 	font-size: 14px;
 	font-weight: bold;
 	text-align: center;
@@ -638,12 +638,12 @@ a {
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 1;
-}
+} */
 
 /* container */
 .container2 {
-	width: 300px;
-	height: 400px;
+	width: 280px;
+	height: 200px;
 	border-radius: 16px;
 	background-color: white;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -655,13 +655,14 @@ a {
 }
 
 /* leaderboard */
-.leaderboard {
+/* .leaderboard {
 	background: linear-gradient(to bottom, #3a404d, #181c26);
-}
+  border-radius: 16px;
+} */
 
 /* head */
 .leaderboard .head {
-	padding: 10px 8px;
+	padding: 0px;
 	color: snow;
 	font-size: 20px;
 	text-align: center;
@@ -676,20 +677,23 @@ a {
 .leaderboard .body {
 	color: snow;
 	font-size: 16px;
+  
 }
-.leaderboard ol {
-	counter-reset: number; /* 定義和初始化計數器 */
+.container3 ol {
+	padding-left: 0 px;
+  counter-reset: number; /* 定義和初始化計數器 */
+color: snow;
 }
-.leaderboard li {
-	padding: 16px;
+.container3 li {
+	padding: 10px;
 	display: flex;
 }
-.leaderboard li mark {
+.container3 li mark {
 	flex-grow: 1;
 	color: snow;
 	background-color: transparent;
 }
-.leaderboard li:before {
+.container3 mark:before {
 	counter-increment: number; /* 遞增計數器 */
 	content: counter(number) "."; /* 顯示計數器 */
 	margin-right: 4px;
@@ -703,10 +707,10 @@ a {
 .leaderboard li:nth-child(3) {
 	background: #d7514d;
 }
-.leaderboard li:nth-child(4) {
+.container3 li:nth-child(4) {
 	background: #cd4b4b;
 }
-.leaderboard li:nth-child(5) {
+.container3 li:nth-child(5) {
 	background: #c24448;
 }
   
