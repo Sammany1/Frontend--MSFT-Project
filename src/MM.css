@@ -12,8 +12,21 @@
   
     display: flex;
     flex-direction: row;
+    height:  0px;
   }
   
+  .Company_Name{
+
+    color: green;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    line-height: 90px; 
+    padding: 7px 20px;
+    font-size: 30px;
+    margin-left: 20px;
+    font-weight: bold;
+  }
   
   
   .Charts_buttons{
@@ -24,7 +37,7 @@
     
   }
   
-  .button_APPL_Chart {
+  .button_X_Chart {
   
     background-color: #c2fbd7;
     border-radius: 100px;
@@ -33,7 +46,7 @@
     cursor: pointer;
     display: inline-block;
     font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-    padding: 7px 20px;
+    padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     transition: all 250ms;
@@ -44,12 +57,13 @@
     touch-action: manipulation;
     
   
-    margin: 20px;
+    margin: 11px;
+
   }
   
   /* .button_APPL_Chart:hover {opacity: 1} */
   
-  .button_APPL_Chart:hover {
+  .button_X_Chart:hover {
     box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
     transform: scale(1.05) rotate(-1deg);
   }
@@ -266,17 +280,17 @@
       .button {
         border: none;
         color: white;
-        padding: 8px 16px;
+        padding: 0px 0px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
-        margin: 8px 4px;
+        margin: 0px 4px;
         transition-duration: 0.4s;
         cursor: pointer;
         /* border-radius: 100px; */
-        margin-left: 50px;
-        margin-top: 69px;
+        /* margin-left: 50px;
+        margin-top: 69px; */
         display: flex;
         
       }
@@ -294,72 +308,6 @@
       .MSFT{
         margin-top: 40px;
       }
-  
-      /* .buy{
-        background-color: white;
-        color:#4CAF50;
-        border: 2px solid black;
-        margin-right: 6px;
-        border-radius: 100px;
-        font-size: 30px;
-      
-      } */
-  
-      /* .BUY{
-      background-color: #4CAF50;
-      color: #F6F6F6;
-      margin-right: 6px;
-      border-radius: 100px;
-      font-size: 20px;
-      }
-  
-      .sell{
-        background-color: white;
-        color:hsl(13, 100%, 50%);
-        border: 2px solid black;
-        margin-right: 6px;
-        border-radius: 100px;
-        
-      }
-  
-      .SELL{
-      background-color: hsl(13, 100%, 50%);;
-      color: #F6F6F6;
-      margin-right: 6px;
-      border-radius: 100px;
-      } */
-      /*
-      .button1 {
-        background-color: #4CAF50;
-        color: white;
-        border: 2px solid #4CAF50;
-        margin-left: 40px;
-        margin-top: 18%;
-      }
-      
-      .button1:hover {
-        background-color: white;
-        color:#4CAF50;
-      }
-      .button1:visited {
-        color: purple;
-      }
-      
-      .button1:active {
-        color: blue;
-      }
-      
-      .button2 {
-        background-color: #008CBA;
-        color: white;
-        border: 2px solid #008CBA;
-        margin-top: 18%;
-      }
-      
-      .button2:hover {
-        background-color:white ;
-        color:#008CBA;
-      }*/
       
       .containerL{
         display:flex;

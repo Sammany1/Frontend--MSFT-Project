@@ -144,15 +144,14 @@ padding-right: 22.5px;
 
 .bottom_row{
 
-    margin-top: -170px;
-    margin-left: 100px;
-}
+    margin-top: -70px;
+    margin-left: 100px;}
 
 .amount_input {
   /* flex-basis: 0; */
   width: 20%;
   margin-right: 20px;
-  margin-left: 200px;
+  margin-left: 20px;
   
 }
 
@@ -170,11 +169,10 @@ padding-right: 22.5px;
     resize: none;
     transition: width 0.3s ease-in-out;
     box-sizing: border-box;
-
     
 /*     
     height: 80px; */
-    width: 100%;
+    width: 60%;
 
     /* font-size: 20pt; */
     /* margin-right: 27.5%; */
@@ -194,9 +192,9 @@ padding-right: 22.5px;
 
     
 }
-.amount_inputt [type=text]:focus {
+/* .amount_inputt [type=text]:focus {
     width: 27%;
-}
+} */
 .amount_input{
 
     ::-webkit-input-placeholder{

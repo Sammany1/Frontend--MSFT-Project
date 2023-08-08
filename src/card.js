@@ -45,8 +45,9 @@ export default function card() {
         <div>
             <div className="bottom_row">
                 <div className=' button'>
-                    
-
+                    <div className="Company_Name">
+                        AAPL
+                    </div>
                     <div className="amount_input">   
                             <form action="/url" method="GET">
                                  <input type="text" id="xxx" name="xxxxd" placeholder="1234.."></input>
@@ -92,8 +93,9 @@ export default function card() {
         <div>
             <div className="bottom_row">
                 <div className=' button'>
-                    
-
+                <div className="Company_Name">
+                        AMZN
+                    </div>
                     <div className="amount_input">   
                             <form action="/url" method="GET">
                                  <input type="text" id="xxx" name="xxxxd" placeholder="1234.."></input>
@@ -142,8 +144,9 @@ export default function card() {
         <div>
             <div className="bottom_row">
                 <div className=' button'>
-                    
-
+                <div className="Company_Name">
+                        IBM
+                    </div>
                     <div className="amount_input">   
                             <form action="/url" method="GET">
                                  <input type="text" id="xxx" name="xxxxd" placeholder="1234.."></input>
@@ -188,8 +191,9 @@ export default function card() {
         <div>
             <div className="bottom_row">
                 <div className=' button'>
-                    
-
+                <div className="Company_Name">
+                        MSFT
+                    </div>
                     <div className="amount_input">   
                             <form action="/url" method="GET">
                                  <input type="text" id="xxx" name="xxxxd" placeholder="1234.."></input>
@@ -234,18 +238,26 @@ export default function card() {
 
             <div>
                 <div className="Charts_buttons">
-                <button className="button_APPL_Chart" type="button" id="myBtn"  >
-                             AAPL
-                        </button>
-                        <button className="button_APPL_Chart" type="button" id="myBtn"  >
-                            AMZN
-                        </button>
-                        <button className="button_APPL_Chart" type="button" id="myBtn"  >
-                             IBM
-                        </button>
-                        <button className="button_APPL_Chart" type="button" id="myBtn"  >
-                             MSFT
-                        </button>
+                    <button className="button_X_Chart" type="button" id="myBtn"  >
+                        <img width="35" height="35" src="https://www.freepnglogos.com/uploads/apple-logo-png/apple-logo-png-dallas-shootings-don-add-are-speech-zones-used-4.png"></img>
+
+                            {/* AAPL */}
+                    </button>
+                    <button className="button_X_Chart" type="button" id="myBtn"  >
+                        <img width="35" height="35" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Amazon_icon.svg/900px-Amazon_icon.svg.png?20210720180728"></img>
+
+                            {/* AMZN */}
+                    </button>
+                    <button className="button_X_Chart" type="button" id="myBtn"  >
+                        <img width="45" height="25" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/2560px-IBM_logo.svg.png"></img>
+
+                             {/* IBM */}
+                    </button>
+                    <button className="button_X_Chart" type="button" id="myBtn"  >
+                             
+                        <img width="35" height="35" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQsVlN9UWq_VPsPuu7RiId5muc3QZfOk3MKibumRASwtXhR21hc"></img>
+                            {/* MSFT */}
+                    </button>
                 </div>
             </div>
 

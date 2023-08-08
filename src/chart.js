@@ -27,7 +27,8 @@ const data = [
 const Chart = () => {
   return (
     <div className="chart">
-      <div className="title">Last 6 Months (Revenue)</div>
+      {/* Changing number  */}
+      <div className="title">(179.41) USD</div>
 
         <AreaChart
           width={800}
