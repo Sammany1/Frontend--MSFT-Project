@@ -28,12 +28,12 @@ const Chart = () => {
   return (
     <div className="chart">
       <div className="title">Last 6 Months (Revenue)</div>
-      <ResponsiveContainer width="100%" aspect={2 / 1}>
+
         <AreaChart
-          width={730}
+          width={800}
           height={250}
           data={data}
-          margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+          margin={{ top: -10, right: 30, left: 0, bottom: 15 }}
         >
           <defs>
             <linearGradient id="total" x1="0" y1="0" x2="0" y2="1">
@@ -52,7 +52,7 @@ const Chart = () => {
             fill="url(#total)"
           />
         </AreaChart>
-      </ResponsiveContainer>
+
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import ChartExample from "./chart2.js"
+import ChartExample from "./chart.js"
 import ChartExample_appl from "./chart_appl.js"
 import ChartExample_amzn from "./chart_amzn.js"
 import ChartExample_ibm from "./chart_ibm.js"
@@ -12,21 +12,106 @@ export default function card() {
     return (
 
         <>
-            <div className="App">
-                <div className="alignm">
+            <div className="all">
+                <div className="top">
                     <Timer2></Timer2>
-                    <div className="align1">
-                        <Card2></Card2>
-                        <Leaderboard></Leaderboard>
-                    </div>
-                    <div className='align1'>
-                        <Market></Market>
-                        <Owned></Owned>
-                    </div>
+                    <Card2></Card2>
                 </div>
+                <div className="center">
+                    <Navigation_Charts></Navigation_Charts>
+                    <ChartExample></ChartExample>
+                    <Owned></Owned>
+                    <Leaderboard></Leaderboard>
+                </div>
+                <div className='bottom'>
+                    <Buy_Sell_Amount></Buy_Sell_Amount>                    
+                </div>
+
             </div>
         </>
     );
+
+    function Buy_Sell_Amount(){
+        
+        const Stocksvalue = 99;
+        let [APPLbuy, setAPPLB] = useState(false)
+        let [APPLsell, setAPPLS] = useState(false)
+        let [AMZNbuy, setAMZNB] = useState(false)
+        let [AMZNsell, setAMZNS] = useState(false)
+        let [IBMbuy, setIBMB] = useState(false)
+        let [IBMsell, setIBMS] = useState(false)
+        let [MSFTbuy, setMSFTB] = useState(false)
+        let [MSFTsell, setMSFTS] = useState(false)
+        
+        return (
+
+        <div>
+            <div className="bottom_row">
+                <div className=' button'>
+                    <div className='APPL'>
+
+                    <div className="amount_input">   
+                            <form action="/url" method="GET">
+                                 <input type="text" id="xxx" name="xxxxd" placeholder="1234.."></input>
+                            </form>
+                        </div>
+
+                        {APPLbuy ?
+                            <button onClick={() => setAPPLB(APPLbuy = false)} className='BUY'>BUY</button>
+                            :
+                            <button onClick={() => {
+                                setAPPLS(AMZNsell = false)
+                                setAPPLB(APPLbuy = true)
+                            }} className='buy'>BUY</button>
+                        }
+                        {APPLsell ?
+                            <button onClick={() => setAPPLS(APPLsell = false)} className='SELL'>SELL</button> :
+                            <button onClick={() => {
+                                setAPPLB(APPLbuy = false)
+                                setAPPLS(APPLsell = true)
+                            }} className='sell'>SELL</button>
+                        }
+                        
+                    </div>
+                        
+                    
+                </div>
+                    
+            </div>
+        </div>
+
+        )
+    }
+    function Navigation_Charts(){
+
+        const sample = require('./temp.json');
+        console.log(sample);
+
+
+        // console.log(data)    
+
+        return (
+
+            <div>
+                <div className="Charts_buttons">
+                <button className="button_APPL_Chart" type="button" id="myBtn"  >
+                             AAPL
+                        </button>
+                        <button className="button_APPL_Chart" type="button" id="myBtn"  >
+                            AMZN
+                        </button>
+                        <button className="button_APPL_Chart" type="button" id="myBtn"  >
+                             IBM
+                        </button>
+                        <button className="button_APPL_Chart" type="button" id="myBtn"  >
+                             MSFT
+                        </button>
+                </div>
+            </div>
+
+        );
+        
+    }
     function Card2() {
 
         const sample = require('./temp.json');
