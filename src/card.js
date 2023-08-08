@@ -24,10 +24,10 @@ export default function card() {
                     <Leaderboard></Leaderboard>
                 </div>
                 <div className='bottom'>
-                    {/* <AAPL_Buy_Sell_Amount></AAPL_Buy_Sell_Amount> */}
+                    <AAPL_Buy_Sell_Amount></AAPL_Buy_Sell_Amount>
                     {/* <AMZN_Buy_Sell_Amount></AMZN_Buy_Sell_Amount>    */}
                     {/* <IBM_Buy_Sell_Amount></IBM_Buy_Sell_Amount>      */}
-                    <MSFTL_Buy_Sell_Amount></MSFTL_Buy_Sell_Amount>       
+                    {/* <MSFTL_Buy_Sell_Amount></MSFTL_Buy_Sell_Amount>        */}
                 </div>
 
             </div>
@@ -45,7 +45,7 @@ export default function card() {
         <div>
             <div className="bottom_row">
                 <div className=' button'>
-                    <div className='APPL'>
+                    
 
                     <div className="amount_input">   
                             <form action="/url" method="GET">
@@ -69,7 +69,7 @@ export default function card() {
                             }} className='sell'>SELL</button>
                         }
                         
-                    </div>
+                   
                         
                     
                 </div>
@@ -92,7 +92,7 @@ export default function card() {
         <div>
             <div className="bottom_row">
                 <div className=' button'>
-                    <div className='APPL'>
+                    
 
                     <div className="amount_input">   
                             <form action="/url" method="GET">
@@ -116,7 +116,7 @@ export default function card() {
                             }} className='sell'>SELL</button>
                         }
                         
-                    </div>
+                    
                         
                     
                 </div>
@@ -142,7 +142,7 @@ export default function card() {
         <div>
             <div className="bottom_row">
                 <div className=' button'>
-                    <div className='APPL'>
+                    
 
                     <div className="amount_input">   
                             <form action="/url" method="GET">
@@ -166,7 +166,7 @@ export default function card() {
                             }} className='sell'>SELL</button>
                         }
                         
-                    </div>
+                    
                         
                     
                 </div>
@@ -188,7 +188,7 @@ export default function card() {
         <div>
             <div className="bottom_row">
                 <div className=' button'>
-                    <div className='APPL'>
+                    
 
                     <div className="amount_input">   
                             <form action="/url" method="GET">
@@ -212,7 +212,7 @@ export default function card() {
                             }} className='sell'>SELL</button>
                         }
                         
-                    </div>
+                   
                         
                     
                 </div>
