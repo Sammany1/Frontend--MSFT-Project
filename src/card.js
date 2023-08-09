@@ -6,6 +6,7 @@ import ChartExample_ibm from "./chart_ibm.js"
 import ChartExample_msft from "./chart_msft.js"
 import Events from "./Events.js"
 import './card.css';
+import ibmImg from './ibm.png'
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -276,7 +277,7 @@ export default function Card(props) {
                         {/* AMZN */}
                     </button>
                     <button onClick={() => setChart(2)} className="button_X_Chart" type="button" id="myBtn"  >
-                        <img width="45" height="25" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/2560px-IBM_logo.svg.png"></img>
+                        <img width="45" height="25" src={ibmImg}></img>
 
                         {/* IBM */}
                     </button>
