@@ -13,7 +13,8 @@ export default function Card(props) {
 
     const location = useLocation()
     const user = location.state.user
-    console.log(user)
+    const [started, setStarted] = useState(location.state.started)
+    console.log(started)
     const [chartnum, setChart] = useState(0)
     const [numOfStocks, setNumOfStocks] = useState({ AAPL: 0, AMZN: 0, IBM: 0, MSFT: 0 })
     let [IBMbuy, setIBMB] = useState(false)
@@ -29,6 +30,12 @@ export default function Card(props) {
     // 1 -> AMZN
     // 2 -> IBM
     // 3 -> MSFT
+    if(!started){
+        return(<>
+        AWAITING USERS
+        </>)
+       
+    }
     return (
         <>
             <div className="all">
