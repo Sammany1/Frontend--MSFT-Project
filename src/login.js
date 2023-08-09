@@ -46,7 +46,7 @@ export default function Login() {
             if(error === 0){
                 let user = response.data
                 let started = false;
-                axios.get(`http://localhost:4000/started/${inputRoomId}}`).then(response =>{ started = response.data}).catch(error=>console.error(error))
+                axios.get(`http://localhost:4000/started/${inputRoomId}`).then(response =>{ started = response.data}).catch(error=>console.error(error))
                 navigate('games',{state :{user, started,inputRoomId}})
             }
             

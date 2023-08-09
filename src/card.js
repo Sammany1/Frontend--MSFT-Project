@@ -28,7 +28,23 @@ export default function Card(props) {
     let [APPLbuy, setAPPLB] = useState(false)
     let [APPLsell, setAPPLS] = useState(false)
     const [intervalId, setIntervalId] = useState(null);
-    function handleInputChange(event) {
+
+  const startInterval = () => {
+    if (intervalId === null) {
+      const id = setInterval(() => {
+        axios.get(`http://localhost:4000/started/${roomid}`).then(response =>{ setStarted(response.data)}).catch(error=>console.error(error))
+      }, 1000); // 1000 milliseconds = 1 second
+      setIntervalId(id);
+    }
+  };
+
+  const stopInterval = () => {
+    if (intervalId !== null) {
+      clearInterval(intervalId);
+      setIntervalId(null);
+    }
+  };
+    function limitAndValidateInput(event) {
         const inputValue = event.target.value;
         
         // Ensure the input value is numeric
@@ -51,9 +67,10 @@ export default function Card(props) {
     // 1 -> AMZN
     // 2 -> IBM
     // 3 -> MSFT
-    if(started){
+    if(!started){
+        startInterval()
         return(<>
-        AWAITING USERS
+       <CircularProgressBar></CircularProgressBar>
         </>)
 
     }
