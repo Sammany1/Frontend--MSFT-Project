@@ -13,15 +13,18 @@ export default function card() {
 
         <>
             <div className="all">
+                <div className="top_row">
+                <Timer2></Timer2>
+                </div>
                 <div className="top">
-                    <Timer2></Timer2>
                     <Card2></Card2>
+                    {/* <Leaderboard></Leaderboard> */}
+
                 </div>
                 <div className="center">
                     <Navigation_Charts></Navigation_Charts>
                     <ChartExample></ChartExample>
                     <Owned></Owned>
-                    <Leaderboard></Leaderboard>
                 </div>
                 <div className='bottom'>
                     <AAPL_Buy_Sell_Amount></AAPL_Buy_Sell_Amount>

@@ -3,11 +3,19 @@
   flex-direction: column;
   
   }
+
+  .top{
+    display: flex;
+    flex-direction: row;
+  }
+
   .center{
   
     display: flex;
     flex-direction: row;
+    
   }
+
   .bottom{
   
     display: flex;
@@ -33,6 +41,7 @@
   
     display: flex;
     flex-direction: column;
+    width: 100%;
     
     
   }
