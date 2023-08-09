@@ -31,11 +31,9 @@ export default function Card(props) {
     return (
         <>
             <div className="all">
-                <div className="top_row">
-                <Timer2></Timer2>
-                </div>
                 <div className="top">
                     <Card2></Card2>
+                    <Timer2></Timer2>
                     {/* <Leaderboard></Leaderboard> */}
 
                 </div>
