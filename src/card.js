@@ -30,7 +30,7 @@ export default function Card(props) {
     // 1 -> AMZN
     // 2 -> IBM
     // 3 -> MSFT
-    if(!started){
+    if(started){
         return(<>
         AWAITING USERS
         </>)
