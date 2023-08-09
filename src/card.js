@@ -57,7 +57,7 @@ export default function Card(props) {
             setIntervalId(null);
         }
     };
-    if (!started) {
+    if (started) {
         startInterval()
         return (<>
             <CircularProgressBar></CircularProgressBar>
