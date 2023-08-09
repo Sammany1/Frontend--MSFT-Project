@@ -31,36 +31,13 @@ export default function Card(props) {
     function limitAndValidateInput(inputElement) {
         const inputValue = inputElement.value;
 
-        // Remove any non-numeric characters using regex
-        const numericValue = inputValue.replace(/\D/g, '');
-
-        // Limit the input value to the desired range (0 to 10)
-        const limitedValue = Math.min(Math.max(numericValue, 0), 10);
-
-        // Update the input field with the limited and validated value
-        inputElement.value = limitedValue;
-    }
-    const startInterval = () => {
-        // Start the interval only if it's not already running
-        if (!intervalId) {
-            const id = setInterval(() => {
-                axios.get(`http://localhost:4000/started/${roomid}}`).then(response => { setStarted(response.data) }).catch(error => console.error(error))
-            }, 1000);
-            setIntervalId(id);
-        }
-    };
-
-    const stopInterval = () => {
-        // Clear the interval if it's running
-        if (intervalId) {
-            clearInterval(intervalId);
-            setIntervalId(null);
-        }
-    };
-    if (started) {
-        startInterval()
-        return (<>
-            <CircularProgressBar></CircularProgressBar>
+    // 0 -> AAPl
+    // 1 -> AMZN
+    // 2 -> IBM
+    // 3 -> MSFT
+    if(started){
+        return(<>
+        AWAITING USERS
         </>)
 
     }

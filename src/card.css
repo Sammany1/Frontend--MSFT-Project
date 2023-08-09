@@ -133,11 +133,11 @@ margin-right: 2%;
 
 
 
-.bottom_row{
+/* .bottom_row{
 
-    margin-top: -90px;
-    margin-left: 200px;
-}
+    /* margin-top: -90px;
+    margin-left: 200px; 
+} */
 
 
 
@@ -148,20 +148,33 @@ margin-right: 2%;
     border-radius: 40px;
     background-position: 10px 10px;
     background-repeat: no-repeat;
-    border: 8px solid #4a5a7e;
+    border: 4px solid #4a5a7e;
     background-color: #a7bceb;
     resize: none;
     transition: width 0.3s ease-in-out;
     box-sizing: border-box;
     
     height: 80px;
-    width: 50%;
+    width: 30%;
 
-    font-size: 20pt;
+    font-size: 30px;
     /* margin-right: 27.5%; */
     margin-top: 3%;
     /* transform: translateX(10px); */
+    font-weight: bold;
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+    
 }
+
+
+
+
+
+
+
+
 .amount_inputt [type=text]:focus {
     width: 27%;
 }
