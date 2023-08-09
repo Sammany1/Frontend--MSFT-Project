@@ -29,7 +29,8 @@ const Chart = () => {
     <div className="chart">
       {/* Changing number  */}
       <div className="title">(179.41) USD</div>
-
+      <div className="chart_hight">
+      <ResponsiveContainer width="100%" height="100%">
         <AreaChart
           width={800}
           height={250}
@@ -53,7 +54,8 @@ const Chart = () => {
             fill="url(#total)"
           />
         </AreaChart>
-
+      </ResponsiveContainer>
+      </div>
     </div>
   );
 };

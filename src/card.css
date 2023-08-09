@@ -4,12 +4,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@800&family=Orbitron:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Poppins:wght@500&display=swap');
 
-/* .allC{ */
-    /* font-family: 'Orbitron', sans-serif; */
+.allC{ 
+    font-family: 'Orbitron', sans-serif;
 
-    /* font-family: 'Oswald', sans-serif; */
-/* font-family: 'Poppins', sans-serif; */
-/* } */
+    font-family: 'Oswald', sans-serif;
+font-family: 'Poppins', sans-serif;
+/* margin: 0; */
+/* width: 100vw;
+height: 100vh; */
+
+}
 
 
 
@@ -35,6 +39,11 @@ margin-right: 24.5px;
 background-image: linear-gradient(#1b549f, #5c9ad1);
 margin-bottom: 20px;
 margin-top: 0px;
+margin-right: 24.5px; */
+border-radius: 16px;
+
+background: #B2EDD3;
+
 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 padding-right: 22.5px;
 /* font-family: "Lucida Console", "Courier New", monospace; */
@@ -81,8 +90,7 @@ padding-right: 22.5px;
 /* ----------------------------------------------------------------------------- */
 
 .owned_card{
-    /* height: 400px; */
-    width: 280px;
+    width: 30%px;
     flex-shrink: 0;
     border-radius: 16px;
     background-image: linear-gradient(#1b549f, #5c9ad1);
@@ -93,6 +101,9 @@ padding-right: 22.5px;
     margin-right: 4px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
+
+
+
 .headerO{
     font-size: 20px;
     font-weight: bolder;
@@ -134,6 +145,8 @@ padding-right: 22.5px;
     font-size: 20px;
     font-weight: bold;
 }  
+
+
 
 
 
