@@ -23,7 +23,7 @@ export default function Card(props) {
     let [MSFTsell, setMSFTS] = useState(false)
     let [APPLbuy, setAPPLB] = useState(false)
     let [APPLsell, setAPPLS] = useState(false)
-    
+
     // 0 -> AAPl
     // 1 -> AMZN
     // 2 -> IBM
@@ -33,7 +33,7 @@ export default function Card(props) {
             <div className="all">
                 <div className="align2">
                     <Card2></Card2>
-                    <Leaderboard></Leaderboard>
+                    <Timer2></Timer2>
                 </div>
                 <div className="center">
                     <Navigation_Charts></Navigation_Charts>
@@ -42,7 +42,7 @@ export default function Card(props) {
                     {chartnum === 2 ? <ChartExample_ibm></ChartExample_ibm> : <></>}
                     {chartnum === 3 ? <ChartExample_msft></ChartExample_msft> : <></>}
                     <Owned></Owned>
-                    
+
                 </div>
                 <div className='bottom'>
                     {chartnum === 0 ? <AAPL_Buy_Sell_Amount num={numOfStocks}></AAPL_Buy_Sell_Amount> : <></>}
@@ -59,7 +59,7 @@ export default function Card(props) {
     function AAPL_Buy_Sell_Amount(props) {
 
         const Stocksvalue_AAPL = 99;
-        
+
 
         return (
 
@@ -74,31 +74,31 @@ export default function Card(props) {
                                 <input autoFocus="autofocus" onChange={(e) => { if (e.target.value === "") { setNumOfStocks({ AAPL: 0, AMZN: numOfStocks.AMZN, IBM: numOfStocks.IBM, MSFT: numOfStocks.MSFT }); return; } if (parseInt(e.target.value) != NaN) { setNumOfStocks({ AAPL: parseInt(e.target.value), AMZN: numOfStocks.AMZN, IBM: numOfStocks.IBM, MSFT: numOfStocks.MSFT }) } }} defaultValue={numOfStocks.AAPL === 0 ? "" : numOfStocks.AAPL} type="text" id="xxx" name="xxxxd" placeholder="1234.."></input>
                             </form>
                         </div>
-                          
+
 
                         {APPLbuy ?
-                            <button onClick={() => setAPPLB(APPLbuy = false)} className='buyclicked'>Buy</button>
+                            <button onClick={() => setAPPLB(APPLbuy = false)} className='BUY'>Buy</button>
                             :
                             <button onClick={() => {
                                 setAPPLS(APPLbuy = false)
                                 setAPPLB(APPLbuy = true)
-                            }} className='buyunclicked'>Buy</button>
+                            }} className='buy'>Buy</button>
                         }
                         {APPLsell ?
-                            <button onClick={() => setAPPLS(APPLsell = false)} className='sellclicked'>Sell</button> :
+                            <button onClick={() => setAPPLS(APPLsell = false)} className='SELL'>Sell</button> :
                             <button onClick={() => {
                                 setAPPLB(APPLsell = false)
                                 setAPPLS(APPLsell = true)
-                            }} className='sellunclicked'>Sell</button>
+                            }} className='sell'>Sell</button>
                         }
-                        
+
                     </div>
-                        
-                    
+
+
                 </div>
-                    
+
             </div>
-        
+
 
         )
     }
@@ -149,7 +149,55 @@ export default function Card(props) {
 
         )
     }
+    function IBM_Buy_Sell_Amount() {
 
+        const Stocksvalue_IBM = 99;
+
+
+
+
+
+
+        return (
+
+            <div>
+                <div className="bottom_row">
+                    <div className=' button'>
+                        <div className="Company_Name">
+                            IBM
+                        </div>
+                        <div className="amount_input">
+                            <form action="/url" method="GET">
+                                <input autoFocus="autofocus" onChange={(e) => { if (e.target.value === "") { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: numOfStocks.AMZN, IBM: 0, MSFT: numOfStocks.MSFT }); return; } if (parseInt(e.target.value) != NaN) { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: numOfStocks.AMZN, IBM: parseInt(e.target.value), MSFT: numOfStocks.MSFT }) } }} defaultValue={numOfStocks.IBM === 0 ? "" : numOfStocks.IBM} type="text" id="xxx" name="xxxxd" placeholder="1234.."></input>
+                            </form>
+                        </div>
+
+                        {IBMbuy ?
+                            <button onClick={() => setIBMB(IBMbuy = false)} className='BUY'>BUY</button>
+                            :
+                            <button onClick={() => {
+                                setIBMS(IBMsell = false)
+                                setIBMB(IBMbuy = true)
+                            }} className='buy'>BUY</button>
+                        }
+                        {IBMsell ?
+                            <button onClick={() => setIBMS(IBMsell = false)} className='SELL'>SELL</button> :
+                            <button onClick={() => {
+                                setIBMB(IBMbuy = false)
+                                setIBMS(IBMsell = true)
+                            }} className='sell'>SELL</button>
+                        }
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        )
+    }
     function MSFTL_Buy_Sell_Amount() {
 
         const Stocksvalue_MSFT = 99;
@@ -245,7 +293,7 @@ export default function Card(props) {
                     <div className="leftC">
                         <div className="top_textC">
                             <div className="top_text_headerC" >
-                                Welcome {sample.users.user} <br />
+                                Welcome {user.username} <br />
                             </div>
                             <div className="top_text_subC">
                                 your account value is
@@ -256,8 +304,8 @@ export default function Card(props) {
                         </div>
                     </div>
                     <div className="right_textC">
-                        Available Amount = $240 <br />
-                        Stocks Value = $1090.29 <br />
+                        Available Amount = ${user.Balance} <br />
+                        Stocks Value = ${user.Stock_Value} <br />
                         Profit = + $240
                     </div>
                 </div>
@@ -494,66 +542,16 @@ export default function Card(props) {
         )
 
     }
-    // function Leaderboard(_props) {
-
-    //     return (
-    //         <body>
-    //             <main>
-    //                 <div className='containerL'>
-    //                     <div id="header">
-    //                         <h1>Ranking</h1>
-    //                     </div>
-    //                     <div id="leaderboard">
-    //                         <div class="ribbon"></div>
-    //                         <table>
-    //                             <tr>
-    //                                 <td class="numberL">1</td>
-    //                                 <td class="nameL">player 1</td>
-    //                                 <td class="points">
-    //                                     258.244 <img class="gold-medal" src="https://github.com/malunaridev/Challenges-iCodeThis/blob/master/4-leaderboard/assets/gold-medal.png?raw=true" alt="gold medal" />
-    //                                 </td>
-    //                             </tr>
-    //                             <tr>
-    //                                 <td class="numberL">2</td>
-    //                                 <td class="nameL">player 2</td>
-    //                                 <td class="points">258.242</td>
-    //                             </tr>
-    //                             <tr>
-    //                                 <td class="numberL">3</td>
-    //                                 <td class="nameL">player 3</td>
-    //                                 <td class="points">258.223</td>
-    //                             </tr>
-    //                             <tr>
-    //                                 <td class="numberL">4</td>
-    //                                 <td class="nameL">player 4</td>
-    //                                 <td class="points">258.212</td>
-    //                             </tr>
-    //                         </table>
-
-    //                     </div></div>
-    //             </main>
-    //         </body>
-
-    //     )
-    // }
 
     function Leaderboard(props) {
 
         return (<>
-            {/* <body>
-	<div class="container2">
-		<div class="leaderboard">
-			<div >
-			    <h1>Leaderboard</h1>
-			</div>
-		</div>
-	</div>
-</body> */}
+           
             <div className="container3">
                 <div class="body">
                     <ol>
                         <li><div className="lead">
-                            leaderboard
+                            Leaderboard
                         </div>
                         </li>
                         <li>

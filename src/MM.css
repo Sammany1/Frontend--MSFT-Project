@@ -55,8 +55,10 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    
   
-    margin: 20px;
+    margin: 11px;
+
   }
   
   /* .button_APPL_Chart:hover {opacity: 1} */
@@ -232,7 +234,6 @@
         padding-left: 30px;
         padding-top: 1px;
         padding-right: 20px;
-        color: #141a39;
         }
       
       .count2{
@@ -276,7 +277,7 @@
         padding-top: 43px;
       }
       
-      .buttons {
+      .button {
         border: none;
         color: white;
         padding: 0px 0px;
@@ -288,39 +289,10 @@
         transition-duration: 0.4s;
         cursor: pointer;
         /* border-radius: 100px; */
-        margin-left: 50px;
+        /* margin-left: 50px;
+        margin-top: 69px; */
+        display: flex;
         
-      }
-      .buyunclicked{
-        background-color: white;
-        color:#4CAF50;
-        border: 1px solid black;
-        margin-right: 6px;
-        border-radius: 50px;
-        margin-left: 200px;
-      }
-      .buyclicked{
-      background-color: #4CAF50;
-      color: #F6F6F6;
-      margin-right: 6px;
-      border-radius: 50px;
-      border: 1px solid black;
-      margin-left: 200px;
-      }
-      .sellunclicked{
-        background-color: white;
-        color:hsl(13, 100%, 50%);
-        border: 1px solid black;
-        margin-right: 6px;
-        border-radius: 50px;
-        
-      }
-      .sellclicked{
-      background-color: hsl(13, 100%, 50%);;
-      color: #F6F6F6;
-      margin-right: 6px;
-      border-radius: 50px;
-      border: 1px solid black;
       }
       
       .APPL{
@@ -583,112 +555,55 @@
     background-color: #B2EDD3;
   }
 
-
-/*
- * Reference - https://codepen.io/supah/pen/WwrJpw
- */
-
-/* basic *//*
-*,
-*:before,
-*:after {
-	box-sizing: border-box;
-}
-html,
-body {
-	height: 100%;
-}
-body {
-	font: 16px/1.2 "Roboto", sans-serif;
-	color: #333;
-}
-a {
-	display: inline-block;
-	color: #333;
-	text-decoration: none;
-} */
-/* .blog {
-	font-size: 14px;
-	font-weight: bold;
-	text-align: center;
-	position: absolute;
-	bottom: 15px;
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: 1;
-} */
-
-/* container */
-/* .container2 {
-	width: 280px;
-	height: 200px;
-	border-radius: 16px;
-	background-color: white;
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-	top: 50%;
-	left: 50%;
-} */
-
-/* leaderboard */
-/* .leaderboard {
-	background: linear-gradient(to bottom, #3a404d, #181c26);
-  border-radius: 16px;
-} */
-
-/* head */
-.lead{
-padding-left: 120px;
-	color: snow;
-	font-size: 40px;
-
-}
-
-/* body */
-.container3 {
-	font-size: 26px;
-	border-radius: 16px;
+  .lead{
+    padding: 5px;
+    padding-left: 140px;
+    color: snow;
+    font-size: 35px;
+  }
+  .container3 {
+    font-size: 26px;
+    border-radius: 16px;
+  }
+  .container3 ol {
+    padding-left: 0px;
+    counter-reset: number; 
+    color: snow;
+  } 
   
-}
-.container3 ol {
-	padding-left: 0px;
-  counter-reset: number; 
-  color: snow;
-} 
+  .container3 li {
+    padding: 30px;
+    display: flex;
+    width: 500px;
+  }
+  .container3 li mark {
+    flex-grow: 1;
+    color: snow;
+    background-color: transparent; 
+  }
+  
+  .container3 mark:before {
+    counter-increment: number; /* 遞增計數器 */
+    content: counter(number) "."; /* 顯示計數器 */
+    margin-right: 40px;
+  }
+  .container3 li:nth-child(1) {
+    background: #93BFCF;
+    border-top-right-radius:16px ;
+    border-top-left-radius:16px ;
+  }
+  .container3 li:nth-child(2) {
+    background: #2C74B3;
+  }
+  .container3 li:nth-child(3) {
+    background: #205295;
+  }
+  .container3 li:nth-child(4) {
+    background: #144272;
+  }
+  .container3 li:nth-child(5) {
+    background: #19376D;
+    border-bottom-right-radius:16px ;
+    border-bottom-left-radius:16px ;
+  }
 
-.container3 li {
-	padding: 30px;
-	display: flex;
-  width: 500px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-
-}
-.container3 li mark {
-	flex-grow: 1;
-	color: snow;
-	background-color: transparent; 
-}
-
-.container3 mark:before {
-	counter-increment: number; /* 遞增計數器 */
-	content: counter(number) "."; /* 顯示計數器 */
-	margin-right: 40px;
-}
-.container3 li:nth-child(1) {
-	background: #93BFCF;
-  border-top-right-radius:16px ;
-  border-top-left-radius:16px ;
-}
-.container3 li:nth-child(2) {
-	background: #2C74B3;
-}
-.container3 li:nth-child(3) {
-	background: #205295;
-}
-.container3 li:nth-child(4) {
-	background: #144272;
-}
-.container3 li:nth-child(5) {
-	background: #19376D;
-  border-bottom-right-radius:16px ;
-  border-bottom-left-radius:16px ;
-}
