@@ -13,23 +13,23 @@ export default function card() {
 
         <>
             <div className="all">
-                <div className="top">
-                    <Timer2></Timer2>
+                <div className="align2">
                     <Card2></Card2>
+                    <Leaderboard></Leaderboard>
                 </div>
                 <div className="center">
                     <Navigation_Charts></Navigation_Charts>
                     <ChartExample></ChartExample>
                     <Owned></Owned>
-                    <Leaderboard></Leaderboard>
+                    
                 </div>
                 <div className='bottom'>
                     <Buy_Sell_Amount></Buy_Sell_Amount>                    
                 </div>
-
             </div>
         </>
     );
+
 
     function Buy_Sell_Amount(){
         
@@ -47,30 +47,32 @@ export default function card() {
 
         <div>
             <div className="bottom_row">
-                <div className=' button'>
+                <div className=' buttons'>
                     <div className='APPL'>
 
-                    <div className="amount_input">   
-                            <form action="/url" method="GET">
-                                 <input type="text" id="xxx" name="xxxxd" placeholder="1234.."></input>
-                            </form>
+                     
+                      <div className='count1'>
+                        <label>Input value:  </label>
+                            <input type="number" id="count1" name="count1" min="0" max="10" />
                         </div>
+                          
 
                         {APPLbuy ?
-                            <button onClick={() => setAPPLB(APPLbuy = false)} className='BUY'>BUY</button>
+                            <button onClick={() => setAPPLB(APPLbuy = false)} className='buyclicked'>Buy</button>
                             :
                             <button onClick={() => {
                                 setAPPLS(AMZNsell = false)
                                 setAPPLB(APPLbuy = true)
-                            }} className='buy'>BUY</button>
+                            }} className='buyunclicked'>Buy</button>
                         }
                         {APPLsell ?
-                            <button onClick={() => setAPPLS(APPLsell = false)} className='SELL'>SELL</button> :
+                            <button onClick={() => setAPPLS(APPLsell = false)} className='sellclicked'>Sell</button> :
                             <button onClick={() => {
                                 setAPPLB(APPLbuy = false)
                                 setAPPLS(APPLsell = true)
-                            }} className='sell'>SELL</button>
+                            }} className='sellunclicked'>Sell</button>
                         }
+                    </div>
                         
                     </div>
                         
@@ -78,7 +80,7 @@ export default function card() {
                 </div>
                     
             </div>
-        </div>
+        
 
         )
     }
@@ -419,15 +421,6 @@ export default function card() {
 function Leaderboard(props){
    
    return( <>
-{/* <body>
-	<div class="container2">
-		<div class="leaderboard">
-			<div >
-			    <h1>Leaderboard</h1>
-			</div>
-		</div>
-	</div>
-</body> */}
    <div className="container3">
    <div class="body">
 				<ol>
@@ -483,6 +476,9 @@ function Leaderboard(props){
 
 
 /*function Market(props) {
+
+
+    
 
     let [APPLbuy, setAPPLB] = useState(false)
     let [APPLsell, setAPPLS] = useState(false)

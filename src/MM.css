@@ -42,7 +42,6 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-  
     margin: 20px;
   }
   
@@ -219,6 +218,7 @@
         padding-left: 30px;
         padding-top: 1px;
         padding-right: 20px;
+        color: #141a39;
         }
       
       .count2{
@@ -262,10 +262,10 @@
         padding-top: 43px;
       }
       
-      .button {
+      .buttons {
         border: none;
         color: white;
-        padding: 8px 16px;
+        padding: 8px 32px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
@@ -273,9 +273,40 @@
         margin: 8px 4px;
         transition-duration: 0.4s;
         cursor: pointer;
-        /* border-radius: 100px; */
+        border-radius: 100px; 
         margin-left: 50px;
         
+      }
+      .buyunclicked{
+        background-color: white;
+        color:#4CAF50;
+        border: 1px solid black;
+        margin-right: 6px;
+        border-radius: 50px;
+        margin-left: 200px;
+      }
+      .buyclicked{
+      background-color: #4CAF50;
+      color: #F6F6F6;
+      margin-right: 6px;
+      border-radius: 50px;
+      border: 1px solid black;
+      margin-left: 200px;
+      }
+      .sellunclicked{
+        background-color: white;
+        color:hsl(13, 100%, 50%);
+        border: 1px solid black;
+        margin-right: 6px;
+        border-radius: 50px;
+        
+      }
+      .sellclicked{
+      background-color: hsl(13, 100%, 50%);;
+      color: #F6F6F6;
+      margin-right: 6px;
+      border-radius: 50px;
+      border: 1px solid black;
       }
       
       .APPL{
@@ -640,7 +671,7 @@ a {
 } */
 
 /* container */
-.container2 {
+/* .container2 {
 	width: 280px;
 	height: 200px;
 	border-radius: 16px;
@@ -648,10 +679,7 @@ a {
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	top: 50%;
 	left: 50%;
-	/* transform: translate(-50%, -50%); */
-	/* z-index: 1; */
-	/* overflow: hidden; */
-}
+} */
 
 /* leaderboard */
 /* .leaderboard {
@@ -660,56 +688,59 @@ a {
 } */
 
 /* head */
-.leaderboard .head {
-	padding: 0px;
+.lead{
+padding-left: 120px;
 	color: snow;
-	font-size: 20px;
-	text-align: center;
-  border-radius: 16px;
-}
-.leaderboard .head h1 {
-	display: inline-block;
-	margin-left: 4px;
+	font-size: 40px;
+
 }
 
 /* body */
-.leaderboard .body {
-	color: snow;
-	font-size: 16px;
+.container3 {
+	font-size: 26px;
+	border-radius: 16px;
   
 }
 .container3 ol {
-	padding-left: 0 px;
-  counter-reset: number; /* 定義和初始化計數器 */
-color: snow;
-}
+	padding-left: 0px;
+  counter-reset: number; 
+  color: snow;
+} 
+
 .container3 li {
-	padding: 10px;
+	padding: 30px;
 	display: flex;
+  width: 500px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
 }
 .container3 li mark {
 	flex-grow: 1;
 	color: snow;
-	background-color: transparent;
+	background-color: transparent; 
 }
+
 .container3 mark:before {
 	counter-increment: number; /* 遞增計數器 */
 	content: counter(number) "."; /* 顯示計數器 */
-	margin-right: 4px;
+	margin-right: 40px;
 }
-.leaderboard li:nth-child(1) {
-	background: #fa6855;
+.container3 li:nth-child(1) {
+	background: #93BFCF;
+  border-top-right-radius:16px ;
+  border-top-left-radius:16px ;
 }
-.leaderboard li:nth-child(2) {
-	background: #e0574f;
+.container3 li:nth-child(2) {
+	background: #2C74B3;
 }
-.leaderboard li:nth-child(3) {
-	background: #d7514d;
+.container3 li:nth-child(3) {
+	background: #205295;
 }
 .container3 li:nth-child(4) {
-	background: #cd4b4b;
+	background: #144272;
 }
 .container3 li:nth-child(5) {
-	background: #c24448;
+	background: #19376D;
+  border-bottom-right-radius:16px ;
+  border-bottom-left-radius:16px ;
 }
-  

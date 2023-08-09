@@ -15,6 +15,7 @@
 
 .profile_card{
 
+    color: #F6F1F1;
 width: 690px;
 
 width: 890px;
@@ -31,7 +32,7 @@ margin: 10px;
 margin-left:20px ;
 border-radius: 16px;
 margin-right: 24.5px;
-background: #B2EDD3;
+background-image: linear-gradient(#1b549f, #5c9ad1);
 margin-bottom: 20px;
 margin-top: 0px;
 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -52,7 +53,7 @@ padding-right: 22.5px;
 .main_numberC {
     padding-left: 150px;
     padding-top: 10px;
-    color: black;
+    color: #F6F1F1;
     font-size: 30px;
     font-weight: bold;
 }
@@ -84,15 +85,12 @@ padding-right: 22.5px;
     width: 280px;
     flex-shrink: 0;
     border-radius: 16px;
-    background: linear-gradient(180deg, rgba(245, 230, 230, 0.48) 0%, rgba(217, 217, 217, 0.00) 100%);
-    background-color: #4CAF50;
-    color: #282c34;
+    background-image: linear-gradient(#1b549f, #5c9ad1);
+    color: #F6F1F1;
     margin-top: 0px; 
     margin-left: 20px;
     margin-bottom: 0px;
     margin-right: 4px;
-    /* transform: translateY(-140px); */
-
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 .headerO{
@@ -129,7 +127,7 @@ padding-right: 22.5px;
 }
 .status{
     /* color: rgb(33, 191, 115); */
-    color: rgb(41, 167, 24);
+    color: #00d9ff
 }
 
 .owned{
@@ -144,8 +142,8 @@ padding-right: 22.5px;
 
 .bottom_row{
 
-    margin-top: -150px;
-    margin-left: 100px;
+    margin-top: -90px;
+    margin-left: 200px;
 }
 
 
