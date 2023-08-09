@@ -564,112 +564,55 @@
     background-color: #B2EDD3;
   }
 
-
-/*
- * Reference - https://codepen.io/supah/pen/WwrJpw
- */
-
-/* basic *//*
-*,
-*:before,
-*:after {
-	box-sizing: border-box;
-}
-html,
-body {
-	height: 100%;
-}
-body {
-	font: 16px/1.2 "Roboto", sans-serif;
-	color: #333;
-}
-a {
-	display: inline-block;
-	color: #333;
-	text-decoration: none;
-} */
-/* .blog {
-	font-size: 14px;
-	font-weight: bold;
-	text-align: center;
-	position: absolute;
-	bottom: 15px;
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: 1;
-} */
-
-/* container */
-.container2 {
-	width: 280px;
-	height: 200px;
-	border-radius: 16px;
-	background-color: white;
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-	top: 50%;
-	left: 50%;
-	/* transform: translate(-50%, -50%); */
-	/* z-index: 1; */
-	/* overflow: hidden; */
-}
-
-/* leaderboard */
-/* .leaderboard {
-	background: linear-gradient(to bottom, #3a404d, #181c26);
-  border-radius: 16px;
-} */
-
-/* head */
-.leaderboard .head {
-	padding: 0px;
-	color: snow;
-	font-size: 20px;
-	text-align: center;
-  border-radius: 16px;
-}
-.leaderboard .head h1 {
-	display: inline-block;
-	margin-left: 4px;
-}
-
-/* body */
-.leaderboard .body {
-	color: snow;
-	font-size: 16px;
+  .lead{
+    padding: 5px;
+    padding-left: 140px;
+    color: snow;
+    font-size: 35px;
+  }
+  .container3 {
+    font-size: 26px;
+    border-radius: 16px;
+  }
+  .container3 ol {
+    padding-left: 0px;
+    counter-reset: number; 
+    color: snow;
+  } 
   
-}
-.container3 ol {
-	padding-left: 0 px;
-  counter-reset: number; /* 定義和初始化計數器 */
-color: snow;
-}
-.container3 li {
-	padding: 10px;
-	display: flex;
-}
-.container3 li mark {
-	flex-grow: 1;
-	color: snow;
-	background-color: transparent;
-}
-.container3 mark:before {
-	counter-increment: number; /* 遞增計數器 */
-	content: counter(number) "."; /* 顯示計數器 */
-	margin-right: 4px;
-}
-.leaderboard li:nth-child(1) {
-	background: #fa6855;
-}
-.leaderboard li:nth-child(2) {
-	background: #e0574f;
-}
-.leaderboard li:nth-child(3) {
-	background: #d7514d;
-}
-.container3 li:nth-child(4) {
-	background: #cd4b4b;
-}
-.container3 li:nth-child(5) {
-	background: #c24448;
-}
+  .container3 li {
+    padding: 30px;
+    display: flex;
+    width: 500px;
+  }
+  .container3 li mark {
+    flex-grow: 1;
+    color: snow;
+    background-color: transparent; 
+  }
   
+  .container3 mark:before {
+    counter-increment: number; /* 遞增計數器 */
+    content: counter(number) "."; /* 顯示計數器 */
+    margin-right: 40px;
+  }
+  .container3 li:nth-child(1) {
+    background: #93BFCF;
+    border-top-right-radius:16px ;
+    border-top-left-radius:16px ;
+  }
+  .container3 li:nth-child(2) {
+    background: #2C74B3;
+  }
+  .container3 li:nth-child(3) {
+    background: #205295;
+  }
+  .container3 li:nth-child(4) {
+    background: #144272;
+  }
+  .container3 li:nth-child(5) {
+    background: #19376D;
+    border-bottom-right-radius:16px ;
+    border-bottom-left-radius:16px ;
+  }
+
