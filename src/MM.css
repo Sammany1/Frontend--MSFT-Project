@@ -497,14 +497,27 @@
           margin: 0;
           font-family: verdana;
         }
-  
+  .timecontainer{
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(#1b549f, #5c9ad1);
+    border-radius: 16px;
+margin-left: 17px;
+margin-bottom: 19px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+color: snow;
+width: 280px;
+  }
   .timer{
     margin-bottom: 0px;
     padding-bottom: 0px;
-    font-size: 1.4rem;
-    color:#141a39;
+    font-size:30px;
+    color:snow
   }
-  
+  .timenum{
+    font-size: 100px;
+    text-align: center;
+  }
   
   /* Style The Dropdown Button */
   .dropbtn {

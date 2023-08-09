@@ -591,8 +591,11 @@ export default function Card(props) {
         }, []);
 
         return (
+            <div className="timecontainer">
             <div className="timer">
-                <b>Time left: {count} seconds </b>
+                <b>Time left: </b><br></br>
+                <b><div className="timenum">{count}</div> </b>
+            </div>
             </div>
         );
     };
