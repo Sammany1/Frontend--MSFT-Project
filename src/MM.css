@@ -3,11 +3,19 @@
   flex-direction: column;
   
   }
+
+  .top{
+    display: flex;
+    flex-direction: row;
+  }
+
   .center{
   
     display: flex;
     flex-direction: row;
+    
   }
+
   .bottom{
   
     display: flex;
@@ -33,6 +41,7 @@
   
     display: flex;
     flex-direction: column;
+    width: 100%;
     
     
   }
@@ -61,18 +70,14 @@
 
   }
   
-  /* .button_APPL_Chart:hover {opacity: 1} */
+  
   
   .button_X_Chart:hover {
     box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
     transform: scale(1.05) rotate(-1deg);
   }
   
-  /* @media (min-width: 768px) {
-    .button-37 {
-      padding: 10px 30px;
-    }
-  } */
+ 
   
   
   
@@ -497,14 +502,27 @@
           margin: 0;
           font-family: verdana;
         }
-  
+  .timecontainer{
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(#1b549f, #5c9ad1);
+    border-radius: 16px;
+margin-left: 17px;
+margin-bottom: 19px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+color: snow;
+width: 280px;
+  }
   .timer{
     margin-bottom: 0px;
     padding-bottom: 0px;
-    font-size: 1.4rem;
-    color:#141a39;
+    font-size:30px;
+    color:snow
   }
-  
+  .timenum{
+    font-size: 100px;
+    text-align: center;
+  }
   
   /* Style The Dropdown Button */
   .dropbtn {

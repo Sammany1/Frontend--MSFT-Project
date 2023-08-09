@@ -38,9 +38,11 @@ export default function Card(props) {
     return (
         <>
             <div className="all">
-                <div className="align2">
+                <div className="top">
                     <Card2></Card2>
                     <Timer2></Timer2>
+                    {/* <Leaderboard></Leaderboard> */}
+
                 </div>
                 <div className="center">
                     <Navigation_Charts></Navigation_Charts>
@@ -49,7 +51,6 @@ export default function Card(props) {
                     {chartnum === 2 ? <ChartExample_ibm></ChartExample_ibm> : <></>}
                     {chartnum === 3 ? <ChartExample_msft></ChartExample_msft> : <></>}
                     <Owned></Owned>
-
                 </div>
                 <div className='bottom'>
                     {chartnum === 0 ? <AAPL_Buy_Sell_Amount num={numOfStocks}></AAPL_Buy_Sell_Amount> : <></>}
@@ -598,8 +599,11 @@ export default function Card(props) {
         }, []);
 
         return (
+            <div className="timecontainer">
             <div className="timer">
-                <b>Time left: {count} seconds </b>
+                <b>Time left: </b><br></br>
+                <b><div className="timenum">{count}</div> </b>
+            </div>
             </div>
         );
     };
