@@ -39,13 +39,13 @@ export default function Login() {
     }
     function entergame() {
         return axios.post(`http://localhost:4000/enter-room/${inputRoomId}`, { "username": `${username}` }).then(response => {
-            console.log(response.data)
             if(response.data === false){
                 setError(3)
                 return
             }
             if(error === 0){
-                navigate('games')
+                let user = response.data
+                navigate('games',{state :{user}})
             }
             
         })

@@ -3,7 +3,6 @@ import './App.css';
 import Card from "./card.js"
 import ChartExample from "./chart.js"
 import useState from "./card.js"
-
 import Login from "./login.js"
 import Market from "./MM.js"
 import Timer2 from "./MM.js"
@@ -15,7 +14,7 @@ import { useNavigate } from 'react-router-dom';
 // import "../public/index.css";
 
 export default function App() {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
   return (
     <div>
