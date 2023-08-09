@@ -17,242 +17,231 @@
 
 }
 
-.bottom {
-
-  display: flex;
-  flex-direction: row;
-  height: 0px;
-}
-
-.Company_Name {
-
-  color: green;
-  text-align: center;
-  vertical-align: middle;
-  justify-content: center;
-  line-height: 90px;
-  padding: 7px 20px;
-  font-size: 30px;
-  margin-left: 20px;
-  font-weight: bold;
-}
-
-
-.Charts_buttons {
-
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-
-
-}
-
-.button_X_Chart {
-
-  background-color: #c2fbd7;
-  border-radius: 100px;
-  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
-  color: green;
-  cursor: pointer;
-  display: inline-block;
-  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 250ms;
-  border: 0;
-  font-size: 30px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-
-
-  margin: 11px;
-
-}
-
-
-
-.button_X_Chart:hover {
-  box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
-  transform: scale(1.05) rotate(-1deg);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.card {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 60%;
-
-  /* width: 1000px; */
-
-  flex-shrink: 0;
-  border-radius: 16px;
-  background: #B2EDD3;
-  color: #282c34;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  margin-top: 3pt;
-  margin-left: 40pt;
-  margin-bottom: 20pt;
-  margin-right: 360pt;
-  padding: 10pt;
-
-
-
-
-}
-
-.align2 {
-  display: flex;
-  flex-direction: row;
-
-}
-
-.align1 {
-  display: flex;
-  flex-direction: row;
-  /* align-items: end; */
-
-
-}
-
-.alignm {
-  display: flex;
-  flex-direction: column;
-  /* align-items: end; */
-}
-
-.market {
-  display: flex;
-  flex-direction: row;
-  width: 900px;
-  flex-shrink: 0;
-  border-radius: 16px;
-  background: linear-gradient(180deg, rgba(245, 230, 230, 0.48) 0%, rgba(217, 217, 217, 0.00) 100%);
-  background-color: #4CAF50;
-  color: #282c34;
-  margin-top: 0px;
-  margin-left: 20px;
-  margin-bottom: 0px;
-  margin-right: 4px;
-  padding: 1px;
-  padding-top: 2px;
-  padding-bottom: 5px;
-  padding-left: 28px;
-
-  #container {
-    overflow: hidden;
+  .bottom{
+  
+    display: flex;
+    flex-direction: row;
+    /* height:  0px; */
   }
+  
+  .Company_Name{
 
-  #floated-imgs {
-    float: right;
+    color: green;
+    /* text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    line-height: 90px; 
+    padding: 7px 20px;
+    font-size: 30px;
+    margin-left: 20px;
+    font-weight: bold;
+    border: 4px;
+    border-color: darkred; */
+    border: 4px solid hsl(229, 89%, 19%);
+    margin-right: 6px;
+    border-radius: 100px;
+    padding: 7px 20px;
+    font-size: 30px;
+    margin: 20px;
+    font-weight: bold;
   }
-
-  #floated-imgs img {
-    display: block;
-  }
-
-  .marketheader {
-    padding-top: 10px;
-  }
-
-
-
-  .graphs {
-    margin-top: 30px;
-    width: 20%;
-    height: 200px;
-    padding: 10px;
-
-  }
-
-  .graph {
-
-    height: 60px;
-  }
-
-
-
-
-
-
-  .appl {
-    padding-top: 40%;
-  }
-
-  .amzn {
-    padding-top: 115%;
-  }
-
-  .ibmp {
-    padding-top: 130%;
-    padding-left: 0px;
-  }
-
-  .msft {
-    padding-top: 100%;
-  }
-
-  .names {
+  
+  
+  .Charts_buttons{
+  
     display: flex;
     flex-direction: column;
-    flex-shrink: 0;
-    padding-bottom: 5px;
-    justify-content: start;
-    font-size: 14px;
+    width: 100%;
+    
+    
+  }
+  
+  .button_X_Chart {
+  
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 30px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    
+  
+    margin: 11px;
 
   }
+  
 
-  .apple {
-    color: #282c34;
-    padding-left: 50px;
-    padding-top: 53px;
+  
+  .button_X_Chart:hover {
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
   }
-}
-
-.amazon {
-  color: #282c34;
-  padding-left: 50px;
-  padding-top: 48px;
-}
-
-.ibm {
-  color: #282c34;
-  padding-left: 50px;
-  padding-top: 53px;
-}
-
-.microsoft {
-  color: #282c34;
-  padding-left: 50px;
-  padding-top: 45px;
-}
-
-.numstock {
-  color: #6C757D;
-  font-family: Inter;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  padding-left: px;
-  padding-bottom: 7px;
-  padding-top: 20px;
-}
+  
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .card{
+      display: flex; 
+      flex-direction: row;
+      justify-content: space-between ;
+      /* width: 60%; */
+  
+      /* width: 1000px; */
+  
+      flex-shrink: 0;
+      border-radius: 16px;
+      background: #B2EDD3;
+      color: #282c34;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      margin-top: 3pt;
+      margin-left: 40pt;
+      margin-bottom: 20pt;
+      margin-right: 360pt;
+      padding: 10pt;
+  
+  
+  
+  
+      }
+      .align2{
+        display: flex;
+        flex-direction: row;
+    
+      }
+      .align1{
+        display: flex;
+        flex-direction: row;
+        /* align-items: end; */
+  
+  
+      }
+      .alignm{
+        display: flex;
+        flex-direction: column;
+       /* align-items: end; */
+      }
+      .market{
+        display:flex;
+        flex-direction: row;
+        width: 900px;
+        flex-shrink: 0;
+        border-radius: 16px;
+        background: linear-gradient(180deg, rgba(245, 230, 230, 0.48) 0%, rgba(217, 217, 217, 0.00) 100%);
+        background-color: #4CAF50;
+        color: #282c34;
+        margin-top: 0px; 
+        margin-left: 20px;
+        margin-bottom: 0px;
+        margin-right: 4px;
+        padding: 1px;
+        padding-top:2px;
+        padding-bottom: 5px;
+        padding-left: 28px;
+      #container { overflow: hidden; }
+      #floated-imgs { float: right; }
+      #floated-imgs img {display: block; }
+  
+      .marketheader{
+        padding-top: 10px;
+      }
+  
+  
+  
+      .graphs{
+          margin-top: 30px;
+          width: 20%;
+          height: 200px;
+          padding: 10px;
+  
+      }
+      .graph{
+        
+        height: 60px;
+      }
+  
+  
+  
+  
+  
+  
+      .appl{
+        padding-top: 40%;
+      }
+      .amzn{
+        padding-top: 115%;
+      }
+      .ibmp{
+        padding-top: 130%;
+        padding-left: 0px;
+      }
+      .msft{
+        padding-top: 100%;
+      }
+      .names{
+        display:flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        padding-bottom: 5px;
+        justify-content: start;
+        font-size: 14px;
+      
+      }
+      .apple{
+        color: #282c34;
+        padding-left: 50px;
+        padding-top: 53px;
+      }
+      }
+      
+      .amazon{
+        color: #282c34;
+        padding-left: 50px;
+        padding-top: 48px;
+      }
+      
+      .ibm{
+        color: #282c34;
+        padding-left: 50px;
+        padding-top: 53px;
+      }
+      
+      .microsoft{
+        color: #282c34;
+        padding-left: 50px;
+        padding-top: 45px;
+      }
+      
+      .numstock{
+        color: #6C757D;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding-left: px;
+        padding-bottom: 7px;
+        padding-top: 20px;
+      }
 
 
 .count1 {

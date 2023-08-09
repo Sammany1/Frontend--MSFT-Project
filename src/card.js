@@ -4,6 +4,7 @@ import ChartExample_appl from "./chart_appl.js"
 import ChartExample_amzn from "./chart_amzn.js"
 import ChartExample_ibm from "./chart_ibm.js"
 import ChartExample_msft from "./chart_msft.js"
+import Events from "./Events.js"
 import './card.css';
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -12,7 +13,8 @@ export default function Card(props) {
 
     const location = useLocation()
     const user = location.state.user
-    console.log(user)
+    const [started, setStarted] = useState(location.state.started)
+    console.log(started)
     const [chartnum, setChart] = useState(0)
     const [numOfStocks, setNumOfStocks] = useState({ AAPL: 0, AMZN: 0, IBM: 0, MSFT: 0 })
     let [IBMbuy, setIBMB] = useState(false)
@@ -28,6 +30,12 @@ export default function Card(props) {
     // 1 -> AMZN
     // 2 -> IBM
     // 3 -> MSFT
+    if(!started){
+        return(<>
+        AWAITING USERS
+        </>)
+       
+    }
     return (
         <>
             <div className="all">
@@ -35,6 +43,8 @@ export default function Card(props) {
                     <Card2></Card2>
                     <Timer2></Timer2>
                     {/* <Leaderboard></Leaderboard> */}
+{/* ------------------- Ali Events ----------------------------- */}
+                     <Events></Events>
 
                 </div>
                 <div className="center">
@@ -44,6 +54,7 @@ export default function Card(props) {
                     {chartnum === 2 ? <ChartExample_ibm></ChartExample_ibm> : <></>}
                     {chartnum === 3 ? <ChartExample_msft></ChartExample_msft> : <></>}
                     <Owned></Owned>
+    
                 </div>
                 <div className='bottom'>
                     {chartnum === 0 ? <AAPL_Buy_Sell_Amount num={numOfStocks}></AAPL_Buy_Sell_Amount> : <></>}
