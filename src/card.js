@@ -28,9 +28,25 @@ export default function Card(props) {
     let [APPLbuy, setAPPLB] = useState(false)
     let [APPLsell, setAPPLS] = useState(false)
     const [intervalId, setIntervalId] = useState(null);
-    function limitAndValidateInput(inputElement) {
-        const inputValue = inputElement.value;
-
+    function handleInputChange(event) {
+        const inputValue = event.target.value;
+        
+        // Ensure the input value is numeric
+        if (!isNaN(inputValue)) {
+          // Convert the input value to a number
+          const numericValue = parseFloat(inputValue);
+          
+          // Limit the value between 0 and 10
+          const clampedValue = Math.min(10, Math.max(0, numericValue));
+          
+          // Update the input value
+          event.target.value = clampedValue;
+        } else {
+          // If input is not numeric, reset the input value
+          event.target.value = '';
+        }
+      }
+      
     // 0 -> AAPl
     // 1 -> AMZN
     // 2 -> IBM
