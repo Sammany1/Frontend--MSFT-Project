@@ -141,8 +141,8 @@ padding-right: 22.5px;
 
 .bottom_row{
 
-    margin-top: -90px;
-    margin-left: 200px;
+    /* margin-top: -90px;
+    margin-left: 200px; */
 }
 
 
@@ -150,6 +150,42 @@ padding-right: 22.5px;
 
 .amount_input [type=text]{
     padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 40px;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    border: 4px solid #4a5a7e;
+    background-color: #a7bceb;
+    resize: none;
+    transition: width 0.3s ease-in-out;
+    box-sizing: border-box;
+    
+    height: 80px;
+    width: 30%;
+
+    font-size: 30px;
+    /* margin-right: 27.5%; */
+    margin-top: 3%;
+    /* transform: translateX(10px); */
+    font-weight: bold;
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+    
+}
+
+
+
+{
+    border: 4px solid hsl(13, 81%, 31%);
+    margin-right: 6px;
+    border-radius: 100px;
+    padding: 7px 20px;
+    font-size: 30px;
+    margin: 20px;
+    font-weight: bold;
+
+    /* padding: 12px 20px;
     margin: 8px 0;
     border-radius: 40px;
     background-position: 10px 10px;
@@ -163,11 +199,15 @@ padding-right: 22.5px;
     height: 80px;
     width: 50%;
 
-    font-size: 20pt;
+    font-size: 20pt; */
     /* margin-right: 27.5%; */
-    margin-top: 3%;
+    /* margin-top: 3%; */
     /* transform: translateX(10px); */
 }
+
+
+
+
 .amount_inputt [type=text]:focus {
     width: 27%;
 }
