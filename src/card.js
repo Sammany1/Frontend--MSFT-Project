@@ -1,5 +1,4 @@
 import React from "react";
-import ChartExample from "./chart.js"
 import ChartExample_appl from "./chart_appl.js"
 import ChartExample_amzn from "./chart_amzn.js"
 import ChartExample_ibm from "./chart_ibm.js"
@@ -8,6 +7,7 @@ import Events from "./Events.js"
 import './card.css';
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Chart1 from "./chart.js";
 
 export default function Card(props) {
 
@@ -30,7 +30,7 @@ export default function Card(props) {
     // 1 -> AMZN
     // 2 -> IBM
     // 3 -> MSFT
-    if(!started){
+    if(started){
         return(<>
         AWAITING USERS
         </>)
@@ -44,7 +44,7 @@ export default function Card(props) {
                     <Timer2></Timer2>
                     {/* <Leaderboard></Leaderboard> */}
 {/* ------------------- Ali Events ----------------------------- */}
-                     <Events></Events>
+                     {/* <Events></Events> */}
 
                 </div>
                 <div className="center">
