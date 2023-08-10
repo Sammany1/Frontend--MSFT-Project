@@ -1,4 +1,6 @@
 import React from "react";
+import RoundScreen from "./roundscreen.js";
+import ChartExample from "./chart.js"
 import ChartExample_appl from "./chart_appl.js"
 import ChartExample_amzn from "./chart_amzn.js"
 import ChartExample_ibm from "./chart_ibm.js"
@@ -9,17 +11,17 @@ import ibmImg from './ibm.png'
 import axios from "axios";
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import useInterval from "./useintervalhook.js";
 import Chart1 from "./chart.js";
 
 export default function Card(props) {
-
     const location = useLocation()
-    const user = location.state.user
+    const [user, setUser] = useState(location.state.user)
     const [started, setStarted] = useState(location.state.started)
     const roomid = location.state.inputRoomId
     const [chartnum, setChart] = useState(0)
     const [numOfStocks, setNumOfStocks] = useState({ AAPL: 0, AMZN: 0, IBM: 0, MSFT: 0 })
-
+    let [currentRound, setCurrentRound] = useState(1)
     let [IBMbuy, setIBMB] = useState(false)
     let [IBMsell, setIBMS] = useState(false)
     let [AMZNbuy, setAMZNB] = useState(false)
@@ -29,51 +31,245 @@ export default function Card(props) {
     let [APPLbuy, setAPPLB] = useState(false)
     let [APPLsell, setAPPLS] = useState(false)
     const [intervalId, setIntervalId] = useState(null);
+    const [AGraph, setAGraph] = useState([
+        { name: "January", Total: 0 },
+        { name: "February", Total: 0 },
+        { name: "March", Total: 0 },
+        { name: "April", Total: 0 },
+        { name: "May", Total: 0 },
+        { name: "June", Total: 0 },
+        { name: "July", Total: 0 },
+        { name: "August", Total: 0 },
+        { name: "September", Total: 0 },
+        { name: "October", Total: 0 },
+    ])
+    const [AMGraph, setAMGraph] = useState([
+        { name: "January", Total: 0 },
+        { name: "February", Total: 0 },
+        { name: "March", Total: 0 },
+        { name: "April", Total: 0 },
+        { name: "May", Total: 0 },
+        { name: "June", Total: 0 },
+        { name: "July", Total: 0 },
+        { name: "August", Total: 0 },
+        { name: "September", Total: 0 },
+        { name: "October", Total: 0 },
+    ])
+    const [IGraph, setIGraph] = useState([
+        { name: "January", Total: 0 },
+        { name: "February", Total: 0 },
+        { name: "March", Total: 0 },
+        { name: "April", Total: 0 },
+        { name: "May", Total: 0 },
+        { name: "June", Total: 0 },
+        { name: "July", Total: 0 },
+        { name: "August", Total: 0 },
+        { name: "September", Total: 0 },
+        { name: "October", Total: 0 },
+    ])
+    const [MGraph, setMGraph] = useState([
+        { name: "January", Total: 0 },
+        { name: "February", Total: 0 },
+        { name: "March", Total: 0 },
+        { name: "April", Total: 0 },
+        { name: "May", Total: 0 },
+        { name: "June", Total: 0 },
+        { name: "July", Total: 0 },
+        { name: "August", Total: 0 },
+        { name: "September", Total: 0 },
+        { name: "October", Total: 0 },
+    ])
+    const [roundStocks, setRoundStocks] = useState({
+        AAPL: 0,
+        AMZN: 0,
+        IBM: 0,
+        MSFT: 0,
+    })
+    const [count, setCount] = useState(0);
 
-  const startInterval = () => {
-    if (intervalId === null) {
-      const id = setInterval(() => {
-        axios.get(`http://localhost:4000/started/${roomid}`).then(response =>{ setStarted(response.data)}).catch(error=>console.error(error))
-      }, 1000); // 1000 milliseconds = 1 second
-      setIntervalId(id);
+    useEffect(() => {
+        axios.get(`http://localhost:4000/round-stocks/${roomid}`).then(response => { setRoundStocks(response.data) }).catch(error => console.error(error))
+        setAGraph(prevGraph => prevGraph.map((item, index) => {
+            if (index === currentRound - 2) {
+                return { ...item, Total: roundStocks.AAPL };
+            } else {
+                return item;
+            }
+        }));
+        setAMGraph(prevGraph => prevGraph.map((item, index) => {
+            if (index === currentRound - 2) {
+                return { ...item, Total: roundStocks.AMZN };
+            } else {
+                return item;
+            }
+        }))
+        setIGraph(prevGraph => prevGraph.map((item, index) => {
+            if (index === currentRound - 2) {
+                return { ...item, Total: roundStocks.IBM };
+            } else {
+                return item;
+            }
+        }))
+        setMGraph(prevGraph => prevGraph.map((item, index) => {
+            if (index === currentRound - 2) {
+                return { ...item, Total: roundStocks.MSFT };
+            } else {
+                return item;
+            }
+        }))
+        buysellAAPL()
+        buysellAMZN()
+        buysellIBM()
+        buysellMSFT()
+        axios.get(`http://localhost:4000/get-user/${roomid}?id=${user.user_id}`, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(res => setUser(res.data))
+            .catch(err => console.error(err));
+        setIBMB(false);
+        setIBMS(false);
+        setAMZNB(false);
+        setAMZNS(false);
+        setMSFTB(false);
+        setMSFTS(false);
+        setAPPLB(false);
+        setAPPLS(false);
+        setNumOfStocks({ AAPL: 0, AMZN: 0, IBM: 0, MSFT: 0 })
+    }, [currentRound])
+    function buysellAAPL() {
+        console.log('here')
+        if (!APPLbuy && !APPLsell) {
+            return
+        }
+        if (APPLbuy) {
+            axios.post(`http://localhost:4000/actions/buy/${roomid}`, { stock: 0, amount: numOfStocks.AAPL, id: user.user_id }, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+        }
+        if (APPLsell) {
+            axios.post(`http://localhost:4000/actions/sell/${roomid}`, { stock: 0, amount: numOfStocks.AAPL, id: user.user_id }, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+        }
     }
-  };
-
-  const stopInterval = () => {
-    if (intervalId !== null) {
-      clearInterval(intervalId);
-      setIntervalId(null);
+    function buysellIBM() {
+        console.log('here')
+        if (!IBMbuy && !IBMsell) {
+            return
+        }
+        if (IBMbuy) {
+            axios.post(`http://localhost:4000/actions/buy/${roomid}`, { stock: 2, amount: numOfStocks.IBM, id: user.user_id }, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+        }
+        if (IBMsell) {
+            axios.post(`http://localhost:4000/actions/sell/${roomid}`, { stock: 2, amount: numOfStocks.IBM, id: user.user_id }, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+        }
     }
-  };
+    function buysellAMZN() {
+        console.log('here')
+        if (!AMZNbuy && !AMZNsell) {
+            return
+        }
+        if (AMZNbuy) {
+            axios.post(`http://localhost:4000/actions/buy/${roomid}`, { stock: 1, amount: numOfStocks.AMZN, id: user.user_id }, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+        }
+        if (AMZNsell) {
+            axios.post(`http://localhost:4000/actions/sell/${roomid}`, { stock: 1, amount: numOfStocks.AMZN, id: user.user_id }, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+        }
+    }
+    function buysellMSFT() {
+        console.log('here')
+        if (!MSFTbuy && !MSFTsell) {
+            return
+        }
+        if (MSFTbuy) {
+            axios.post(`http://localhost:4000/actions/buy/${roomid}`, { stock: 3, amount: numOfStocks.MSFT, id: user.user_id }, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+        }
+        if (MSFTsell) {
+            axios.post(`http://localhost:4000/actions/sell/${roomid}`, { stock: 3, amount: numOfStocks.MSFT, id: user.user_id }, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+        }
+    }
+    const startInterval = () => {
+        if (intervalId === null) {
+            const id = setInterval(() => {
+                axios.get(`http://localhost:4000/started/${roomid}`).then(response => { setStarted(response.data) }).catch(error => console.error(error))
+            }, 1000);
+            setIntervalId(id);
+        }
+    };
+    if (currentRound == 11) {
+        return (<>
+            <Leaderboard></Leaderboard>
+        </>)
+    }
+    const stopInterval = () => {
+        if (intervalId !== null) {
+            clearInterval(intervalId);
+            setIntervalId(null);
+        }
+    };
     function limitAndValidateInput(event) {
-        const inputValue = event.target.value;
-        
+        if (event.value === '') {
+            event.value = ''
+            return
+        }
+        const inputValue = event.value;
+
         // Ensure the input value is numeric
         if (!isNaN(inputValue)) {
-          // Convert the input value to a number
-          const numericValue = parseFloat(inputValue);
-          
-          // Limit the value between 0 and 10
-          const clampedValue = Math.min(10, Math.max(0, numericValue));
-          
-          // Update the input value
-          event.target.value = clampedValue;
+            // Convert the input value to a number
+            const numericValue = parseFloat(inputValue);
+
+            // Limit the value between 0 and 10
+            const clampedValue = Math.min(10, Math.max(0, numericValue));
+
+            // Update the input value
+            event.value = clampedValue;
         } else {
-          // If input is not numeric, reset the input value
-          event.target.value = '';
+            // If input is not numeric, reset the input value
+            event.value = '';
         }
-      }
-      
+    }
+
     // 0 -> AAPl
     // 1 -> AMZN
     // 2 -> IBM
     // 3 -> MSFT
-    // if(!started){
-    //     startInterval()
-    //     return(<>
-    //    <CircularProgressBar></CircularProgressBar>
-    //     </>)
-
+    if (!started) {
+        startInterval()
+        return (<>
+            <CircularProgressBar></CircularProgressBar>
+        </>)
+    }
     // }
     // if (started) {
     //     stopInterval()
@@ -85,10 +281,11 @@ export default function Card(props) {
                 <Card2></Card2>
                 <div className="chart1">
                 <Navigation_Charts></Navigation_Charts>
-                    {chartnum === 0 ? <ChartExample_appl></ChartExample_appl> : <></>}
-                    {chartnum === 1 ? <ChartExample_amzn></ChartExample_amzn> : <></>}
-                    {chartnum === 2 ? <ChartExample_ibm></ChartExample_ibm> : <></>}
-                    {chartnum === 3 ? <ChartExample_msft></ChartExample_msft> : <></>}
+                    {chartnum === 0 ? <ChartExample_appl data={AGraph}></ChartExample_appl> : <></>}
+                    {chartnum === 1 ? <ChartExample_amzn data={AMGraph}></ChartExample_amzn> : <></>}
+                    {chartnum === 2 ? <ChartExample_ibm data={IGraph}></ChartExample_ibm> : <></>}
+                    {chartnum === 3 ? <ChartExample_msft data={MGraph}></ChartExample_msft> : <></>}
+                    
                     </div>
                     {chartnum === 0 ? <AAPL_Buy_Sell_Amount num={numOfStocks}></AAPL_Buy_Sell_Amount> : <></>}
       {chartnum === 1 ? <AMZN_Buy_Sell_Amount num={numOfStocks}></AMZN_Buy_Sell_Amount> : <></>}
@@ -202,6 +399,10 @@ export default function Card(props) {
 
         )
     }
+    function nextRound() {
+        console.log(currentRound)
+        setCurrentRound(prev => prev == 10 ? prev = 11 : prev + 1)
+    }
     function IBM_Buy_Sell_Amount() {
 
 
@@ -290,6 +491,9 @@ export default function Card(props) {
 
         )
     }
+    function setRound() {
+
+    }
     function Navigation_Charts() {
         return (
 
@@ -342,13 +546,12 @@ export default function Card(props) {
                             </div>
                         </div>
                         <div className="main_numberC">
-                            ${sample.users.random_id}
+                            ${user.Balance.toFixed(2)}
                         </div>
                     </div>
                     <div className="right_textC">
-                        Available Amount = ${user.Balance} <br />
-                        Stocks Value = ${user.Stock_Value} <br />
-                        Profit = + $240
+                        Available Amount = ${user.Balance.toFixed(2)} <br />
+                        Stocks Value = ${user.Stock_Value.toFixed(2)} <br />
                     </div>
                 </div>
 
@@ -373,11 +576,11 @@ export default function Card(props) {
                     <div className="nameO">
                         APPL
                     </div>
-                    <div className="status">
+                    {/* <div className="status">
                         +9.77%
-                    </div>
+                    </div> */}
                     <div className="owned">
-                        $10000$
+                        {user.stocks[0]}
                     </div>
 
                 </div>
@@ -385,33 +588,33 @@ export default function Card(props) {
                     <div className="nameO">
                         AMZN
                     </div>
-                    <div className="status">
+                    {/* <div className="status">
                         +9.77%
-                    </div>
+                    </div> */}
                     <div className="owned">
-                        $10000$
+                        {user.stocks[1]}
                     </div>
                 </div>
                 <div className="row">
                     <div className="nameO">
                         IBM
                     </div>
-                    <div className="status">
+                    {/* <div className="status">
                         +9.77%
-                    </div>
+                    </div> */}
                     <div className="owned">
-                        $10000$
+                        {user.stocks[2]}
                     </div>
                 </div>
                 <div className="row">
                     <div className="nameO">
                         MSFT
                     </div>
-                    <div className="status">
+                    {/* <div className="status">
                         +9.77%
-                    </div>
+                    </div> */}
                     <div className="owned">
-                        $10000$
+                        {user.stocks[3]}
                     </div>
                 </div>
             </div>)
@@ -586,51 +789,60 @@ export default function Card(props) {
     }
 
     function Leaderboard(props) {
-
-        return (<>
-
-            <div className="container3">
-                <div class="body">
-                    <ol>
-                        <li><div className="lead">
-                            Leaderboard
-                        </div>
-                        </li>
-                        <li>
-                            <mark>Brandon Barnes</mark>
-                            <small>750</small>
-                        </li>
-                        <li>
-                            <mark>Raymond Knight</mark>
-                            <small>684</small>
-                        </li>
-                        <li>
-                            <mark>Trevor McCormick</mark>
-                            <small>335</small>
-                        </li>
-                        <li>
-                            <mark>Andrew Fox</mark>
-                            <small>296</small>
-                        </li>
-                    </ol>
-                </div></div>
-        </>
-        )
-    }
-
-
-    function Timer2(props) {
-        const [count, setCount] = useState(60);
-
+        const [lead, setLead] = useState({});
+        const [loading, setLoading] = useState(true);
+    
         useEffect(() => {
-            const timer = setInterval(() => {
-                setCount((prevCount) => (prevCount > 0 ? prevCount - 1 : 0));
-            }, 1000);
-
-            return () => {
-                clearInterval(timer);
-            };
+            axios.get(`http://localhost:4000/leaderboard/${roomid}`)
+                .then(res => {
+                    console.log(res.data);
+                    setLead(res.data);
+                    setLoading(false); 
+                })
+                .catch(err => console.log(err));
         }, []);
+    
+        return (
+            <div className="container3">
+                <div className="body">
+                    <ol>
+                        <li>
+                            <div className="lead">
+                                Leaderboard
+                            </div>
+                        </li>
+                        {loading ? (
+                            <li>Loading...</li>
+                        ) : (
+                            <>
+                                <li><mark>{lead['1']['name']}</mark></li>
+                                <li><mark>{lead['2']['name']}</mark></li>
+                                <li><mark>{lead['3']['name']}</mark></li>
+                                <li><mark>{lead['4']['name']}</mark></li>
+                            </>
+                        )}
+                    </ol>
+                </div>
+            </div>
+        );
+    }
+    
+
+    
+    function Timer2(props) {
+
+
+        useInterval(() => {
+
+            setCount((prevCount) => (prevCount > 0 ? prevCount - 1 : 0));
+            if (count == 0) {
+                setCount(5)
+                nextRound()
+
+            }
+        }, 1000, null)
+
+
 
         return (
             <div className="timecontainer">
@@ -765,4 +977,3 @@ function Event_APPL() {
   }
   
 
-  

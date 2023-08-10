@@ -1,33 +1,4 @@
-{
-  <div className="all">
-  <div className="top">
-      <Card2></Card2>
-      <Timer2></Timer2>
-      {/* <Leaderboard></Leaderboard> */}
-{/* ------------------- Ali Events ----------------------------- */}
-       {/* <Events></Events> */}
-
-  /* </div>
-  <div className="center">
-      <Navigation_Charts></Navigation_Charts>
-      {chartnum === 0 ? <ChartExample_appl></ChartExample_appl> : <></>}
-      {chartnum === 1 ? <ChartExample_amzn></ChartExample_amzn> : <></>}
-      {chartnum === 2 ? <ChartExample_ibm></ChartExample_ibm> : <></>}
-      {chartnum === 3 ? <ChartExample_msft></ChartExample_msft> : <></>}
-      <Event_APPL></Event_APPL>
-      <Owned></Owned>
-
-  </div>
-  <div className='bottom'>
-      {chartnum === 0 ? <AAPL_Buy_Sell_Amount num={numOfStocks}></AAPL_Buy_Sell_Amount> : <></>}
-      {chartnum === 1 ? <AMZN_Buy_Sell_Amount num={numOfStocks}></AMZN_Buy_Sell_Amount> : <></>}
-      {chartnum === 2 ? <IBM_Buy_Sell_Amount num={numOfStocks}></IBM_Buy_Sell_Amount> : <></>}
-      {chartnum === 3 ? <MSFTL_Buy_Sell_Amount num={numOfStocks}></MSFTL_Buy_Sell_Amount> : <></>}
-
-  </div>
-</div> */
-}
-
+ 
 
 
 

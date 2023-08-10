@@ -9,20 +9,17 @@ import {
   ResponsiveContainer,
 } from "recharts";
 const ChartExample_amzn = (props) => {
-  const data = [
-   { name: "January", Total: 900 },
-  { name: "February", Total: 0 },
-  { name: "March", Total: 0 },
-  { name: "April", Total: 1600 },
-  { name: "May", Total: 900 },
-  { name: "June", Total: 1700 },
-  { name: "June", Total: 1800 },
+  const data = props.data
+  const findPreviousObjectBeforeZeroTotal = (graphArray) => {
+    for (let i = 1; i < graphArray.length; i++) {
+        if (graphArray[i].Total === 0) {
+            return graphArray[i - 1];
+        }
+    }
+    return null;  
+};
 
-  { name: "June", Total: 100 },
-  { name: "June", Total: 1100 },
-  { name: "June", Total: 1300 },
-  { name: "June", Total: 1400 },
-  ];
+const previousObject = findPreviousObjectBeforeZeroTotal(data);
 
   return (
       <div className="chart">

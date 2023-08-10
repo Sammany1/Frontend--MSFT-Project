@@ -7,22 +7,19 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-const ChartExample_ibm = () => {
-  const data = [
-    { name: "January", Total: 500 },
-   { name: "February", Total: 600 },
-   { name: "March", Total: 700 },
-   { name: "April", Total: 15 },
-   { name: "May", Total: 900 },
-   { name: "June", Total: 1700 },
-   { name: "June", Total: 1800 },
- 
-   { name: "June", Total: 100 },
-   { name: "June", Total: 1100 },
-   { name: "June", Total: 1300 },
-   { name: "June", Total: 1400 },
-   ];
- 
+const ChartExample_ibm = (props) => {
+  const data = props.data
+  const findPreviousObjectBeforeZeroTotal = (graphArray) => {
+    for (let i = 1; i < graphArray.length; i++) {
+        if (graphArray[i].Total === 0) {
+            return graphArray[i - 1];
+        }
+    }
+    return null;  
+};
+
+const previousObject = findPreviousObjectBeforeZeroTotal(data);
+
    return (
     <div className="chart">
       {/* Changing number  */}
