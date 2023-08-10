@@ -68,16 +68,16 @@ export default function Card(props) {
     // 1 -> AMZN
     // 2 -> IBM
     // 3 -> MSFT
-    if(!started){
-        startInterval()
-        return(<>
-       <CircularProgressBar></CircularProgressBar>
-        </>)
+    // if(!started){
+    //     startInterval()
+    //     return(<>
+    //    <CircularProgressBar></CircularProgressBar>
+    //     </>)
 
-    }
-    if (started) {
-        stopInterval()
-    }
+    // }
+    // if (started) {
+    //     stopInterval()
+    // }
     return (
         <>
             <div className="all">
@@ -124,7 +124,7 @@ export default function Card(props) {
                         </div>
                         <div className="amount_input">
                             <form action="/url" method="GET">
-                                <input onInput={(e) => limitAndValidateInput(e.target)} pattern="[0-9]" autoFocus="autofocus" onChange={(e) => { if (e.target.value === "") { setNumOfStocks({ AAPL: 0, AMZN: numOfStocks.AMZN, IBM: numOfStocks.IBM, MSFT: numOfStocks.MSFT }); return; } if (parseInt(e.target.value) != NaN) { setNumOfStocks({ AAPL: parseInt(e.target.value), AMZN: numOfStocks.AMZN, IBM: numOfStocks.IBM, MSFT: numOfStocks.MSFT }) } }} defaultValue={numOfStocks.AAPL === 0 ? "" : numOfStocks.AAPL} type="text" id="xxx" name="xxxxd" placeholder="1234.."></input>
+                                <input onInput={(e) => limitAndValidateInput(e.target)} pattern="[0-9]" autoFocus="autofocus" onChange={(e) => { if (e.target.value === "") { setNumOfStocks({ AAPL: 0, AMZN: numOfStocks.AMZN, IBM: numOfStocks.IBM, MSFT: numOfStocks.MSFT }); return; } if (parseInt(e.target.value) != NaN) { setNumOfStocks({ AAPL: parseInt(e.target.value), AMZN: numOfStocks.AMZN, IBM: numOfStocks.IBM, MSFT: numOfStocks.MSFT }) } }} defaultValue={numOfStocks.AAPL === 0 ? "" : numOfStocks.AAPL} type="text" id="xxx" name="xxxxd" placeholder="# Stocks"></input>
                             </form>
                         </div>
 
@@ -172,7 +172,7 @@ export default function Card(props) {
                         </div>
                         <div className="amount_input">
                             <form action="/url" method="GET">
-                                <input onInput={(e) => limitAndValidateInput(e.target)} pattern="[0-9]" autoFocus="autofocus" onChange={(e) => { if (e.target.value === "") { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: 0, IBM: numOfStocks.IBM, MSFT: numOfStocks.MSFT }); return; } if (parseInt(e.target.value) != NaN) { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: parseInt(e.target.value), IBM: numOfStocks.IBM, MSFT: numOfStocks.MSFT }) } }} defaultValue={numOfStocks.AMZN === 0 ? "" : numOfStocks.AMZN} type="text" id="xxx" name="xxxxd" placeholder="1234.."></input>
+                                <input onInput={(e) => limitAndValidateInput(e.target)} pattern="[0-9]" autoFocus="autofocus" onChange={(e) => { if (e.target.value === "") { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: 0, IBM: numOfStocks.IBM, MSFT: numOfStocks.MSFT }); return; } if (parseInt(e.target.value) != NaN) { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: parseInt(e.target.value), IBM: numOfStocks.IBM, MSFT: numOfStocks.MSFT }) } }} defaultValue={numOfStocks.AMZN === 0 ? "" : numOfStocks.AMZN} type="text" id="xxx" name="xxxxd" placeholder="# Stocks"></input>
                             </form>
                         </div>
 
@@ -220,7 +220,7 @@ export default function Card(props) {
                         </div>
                         <div className="amount_input">
                             <form action="/url" method="GET">
-                                <input onInput={(e) => limitAndValidateInput(e.target)} pattern="[0-9]" autoFocus="autofocus" onChange={(e) => { if (e.target.value === "") { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: numOfStocks.AMZN, IBM: 0, MSFT: numOfStocks.MSFT }); return; } if (parseInt(e.target.value) != NaN) { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: numOfStocks.AMZN, IBM: parseInt(e.target.value), MSFT: numOfStocks.MSFT }) } }} defaultValue={numOfStocks.IBM === 0 ? "" : numOfStocks.IBM} type="text" id="xxx" name="xxxxd" placeholder="1234.."></input>
+                                <input onInput={(e) => limitAndValidateInput(e.target)} pattern="[0-9]" autoFocus="autofocus" onChange={(e) => { if (e.target.value === "") { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: numOfStocks.AMZN, IBM: 0, MSFT: numOfStocks.MSFT }); return; } if (parseInt(e.target.value) != NaN) { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: numOfStocks.AMZN, IBM: parseInt(e.target.value), MSFT: numOfStocks.MSFT }) } }} defaultValue={numOfStocks.IBM === 0 ? "" : numOfStocks.IBM} type="text" id="xxx" name="xxxxd" placeholder="# Stocks"></input>
                             </form>
                         </div>
 
@@ -264,7 +264,7 @@ export default function Card(props) {
                         </div>
                         <div className="amount_input">
                             <form action="/url" method="GET">
-                                <input onInput={(e) => limitAndValidateInput(e.target)} pattern="[0-9]" autoFocus="autofocus" onChange={(e) => { if (e.target.value === "") { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: numOfStocks.AMZN, IBM: numOfStocks.IBM, MSFT: 0 }); return; } if (parseInt(e.target.value) != NaN) { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: numOfStocks.AMZN, IBM: numOfStocks.IBM, MSFT: parseInt(e.target.value) }) } }} defaultValue={numOfStocks.MSFT === 0 ? "" : numOfStocks.MSFT} type="text" id="xxx" name="xxxxd" placeholder="1234.."></input>
+                                <input onInput={(e) => limitAndValidateInput(e.target)} pattern="[0-9]" autoFocus="autofocus" onChange={(e) => { if (e.target.value === "") { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: numOfStocks.AMZN, IBM: numOfStocks.IBM, MSFT: 0 }); return; } if (parseInt(e.target.value) != NaN) { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: numOfStocks.AMZN, IBM: numOfStocks.IBM, MSFT: parseInt(e.target.value) }) } }} defaultValue={numOfStocks.MSFT === 0 ? "" : numOfStocks.MSFT} type="text" id="xxx" name="xxxxd" placeholder="# stocks"></input>
                             </form>
                         </div>
 
