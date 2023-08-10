@@ -338,7 +338,7 @@ export default function Card(props) {
                                 Welcome {user.username} <br />
                             </div>
                             <div className="top_text_subC">
-                                your account value is
+                                your account value is:
                             </div>
                         </div>
                         <div className="main_numberC">
