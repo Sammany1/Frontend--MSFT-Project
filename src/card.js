@@ -80,32 +80,32 @@ export default function Card(props) {
     // }
     return (
         <>
-            <div className="all">
-                <div className="top">
-                    <Card2></Card2>
-                    <Timer2></Timer2>
-                    {/* <Leaderboard></Leaderboard> */}
-{/* ------------------- Ali Events ----------------------------- */}
-                     {/* <Events></Events> */}
-
-                </div>
-                <div className="center">
-                    <Navigation_Charts></Navigation_Charts>
+         <div className="all1">
+            <div className="left_70">
+                <Card2></Card2>
+                <div className="chart1">
+                <Navigation_Charts></Navigation_Charts>
                     {chartnum === 0 ? <ChartExample_appl></ChartExample_appl> : <></>}
                     {chartnum === 1 ? <ChartExample_amzn></ChartExample_amzn> : <></>}
                     {chartnum === 2 ? <ChartExample_ibm></ChartExample_ibm> : <></>}
                     {chartnum === 3 ? <ChartExample_msft></ChartExample_msft> : <></>}
-                    <Owned></Owned>
-    
-                </div>
-                <div className='bottom'>
+                    </div>
                     {chartnum === 0 ? <AAPL_Buy_Sell_Amount num={numOfStocks}></AAPL_Buy_Sell_Amount> : <></>}
-                    {chartnum === 1 ? <AMZN_Buy_Sell_Amount num={numOfStocks}></AMZN_Buy_Sell_Amount> : <></>}
-                    {chartnum === 2 ? <IBM_Buy_Sell_Amount num={numOfStocks}></IBM_Buy_Sell_Amount> : <></>}
-                    {chartnum === 3 ? <MSFTL_Buy_Sell_Amount num={numOfStocks}></MSFTL_Buy_Sell_Amount> : <></>}
-
-                </div>
+      {chartnum === 1 ? <AMZN_Buy_Sell_Amount num={numOfStocks}></AMZN_Buy_Sell_Amount> : <></>}
+      {chartnum === 2 ? <IBM_Buy_Sell_Amount num={numOfStocks}></IBM_Buy_Sell_Amount> : <></>}
+      {chartnum === 3 ? <MSFTL_Buy_Sell_Amount num={numOfStocks}></MSFTL_Buy_Sell_Amount> : <></>}
             </div>
+            <div className="right_30">
+                <Timer2></Timer2>
+                <Event_APPL></Event_APPL>
+                {/* <Event_AMZN></Event_AMZN>
+                <Event_IBM></Event_IBM>
+                <Event_MSFT></Event_MSFT> */}
+                <Owned></Owned>
+                
+                    
+            </div>
+         </div>
         </>
     );
 
@@ -646,189 +646,7 @@ export default function Card(props) {
 
 
 
-/*function Market(props) {
 
-
-    
-
-    let [APPLbuy, setAPPLB] = useState(false)
-    let [APPLsell, setAPPLS] = useState(false)
-    let [AMZNbuy, setAMZNB] = useState(false)
-    let [AMZNsell, setAMZNS] = useState(false)
-    let [IBMbuy, setIBMB] = useState(false)
-    let [IBMsell, setIBMS] = useState(false)
-    let [MSFTbuy, setMSFTB] = useState(false)
-    let [MSFTsell, setMSFTS] = useState(false)
-    let Stocksvalue = 99
-    return (
-
-<div className="market">
-    <div id="container">
-        <div className="row2">
-            <div id="floated-imgs">
-                <img width="30" height="30" src="https://www.freepnglogos.com/uploads/apple-logo-png/apple-logo-png-dallas-shootings-don-add-are-speech-zones-used-4.png"></img>
-            </div>
-            <div className='names'>
-              <b>APPL</b>
-            </div>
-            <div className='stocksvalue1'>
-                 ${Stocksvalue}<br></br>
-            </div>
-            <div className="count">
-            <form action='#'>
-                <select id='number-dd' name='number'>
-                    <option value=''></option>
-                    <option value='one'>1</option>
-                    <option value='two'>2</option>
-                    <option value='three'>3</option>
-                    <option value='four'>4</option>
-                </select>
-            </form>
-            </div>
-            <div className=' button'>
-        
-
-          {APPLbuy ?
-            <button onClick={() => setAPPLB(APPLbuy = false)} className='BUY'>buy</button>
-            :
-            <button onClick={() => {
-              setAPPLS(AMZNsell = false)
-              setAPPLB(APPLbuy = true)
-            }} className='buy'>buy</button>
-          }
-          {APPLsell ?
-            <button onClick={() => setAPPLS(APPLsell = false)} className='SELL'>sell</button> :
-            <button onClick={() => {
-              setAPPLB(APPLbuy = false)
-              setAPPLS(APPLsell = true)
-            }} className='sell'>sell</button>
-          }
-        </div>
-    </div>
-        <div className="row2">
-            <div id="floated-imgs">
-                <img width="50" height="50" src="https://1000logos.net/wp-content/uploads/2016/10/Amazon-Logo-768x480.png"></img>
-             </div>
-            <div className='names'>
-              <b>AMZN</b>
-            </div>
-            <div className='stocksvalue'>
-                 ${Stocksvalue}<br></br>
-            </div>
-            <div className="count2">
-            <form action='#'>
-                <select id='number-dd' name='number'>
-                    <option value=''></option>
-                    <option value='one'>1</option>
-                    <option value='two'>2</option>
-                    <option value='three'>3</option>
-                    <option value='four'>4</option>
-                </select>
-            </form>
-            </div>
-            <div className=' button'>
-
-            {AMZNbuy ?
-            <button onClick={() => setAMZNB(AMZNbuy = false)} className='BUY'>buy</button>
-            :
-            <button onClick={() => {
-              setAMZNS(AMZNsell = false)
-              setAMZNB(AMZNbuy = true)
-            }} className='buy'>buy</button>
-          }
-
-          {AMZNsell ?
-            <button onClick={() => setAMZNS(AMZNsell = false)} className='SELL'>sell</button> :
-            <button onClick={() => {
-              setAMZNB(AMZNbuy = false)
-              setAMZNS(AMZNsell = true)
-            }} className='sell'>sell</button>
-          }
-        </div>
-    </div>
-        <div className="row2">
-            <div id="floated-imgs">
-            <img width="35" height="35" src="https://png2.cleanpng.com/sh/33b62c4491b5a4d72aaf477987de5912/L0KzQYm3VsA5N51vjpH0aYP2gLBuTfljdV5uiARqZXywfMXrTfxwb5Cyeud8aX7og8S0gB9ve6ZxjNN3dD24coLog8Q1apI8TqtsMD65R4WBUMI2PGI6Sqo9OEC7RIS9WMU4NqFzf3==/kisspng-ibm-israel-ltd-logo-business-consultant-5b1ac44ba769c0.6748025415284808436857.png"></img>
-            </div>
-            <div className='names'>
-              <b>IBM</b>
-            </div>
-            <div className='stocksvalue3'>
-                 ${Stocksvalue}<br></br>
-            </div>
-            <div className="count">
-            <form action='#'>
-                <select id='number-dd' name='number'>
-                    <option value=''></option>
-                    <option value='one'>1</option>
-                    <option value='two'>2</option>
-                    <option value='three'>3</option>
-                    <option value='four'>4</option>
-                </select>
-            </form>
-            </div>
-            <div className=' button'>
-        
-
-            {IBMbuy ?
-            <button onClick={() => setIBMB(IBMbuy = false)} className='BUY'>buy</button>
-            :
-            <button onClick={() => {
-              setIBMS(IBMsell = false)
-              setIBMB(IBMbuy = true)
-            }} className='buy'>buy</button>
-          }
-          {IBMsell ?
-            <button onClick={() => setIBMS(IBMsell = false)} className='SELL'>sell</button> :
-            <button onClick={() => {
-              setIBMB(IBMbuy = false)
-              setIBMS(IBMsell = true)
-            }} className='sell'>sell</button>
-          }
-        </div>
-    </div>
-
-        <div className="row2">
-            <div id="floated-imgs">
-            <img width="50" height="50" src="https://www.freepnglogos.com/uploads/microsoft-logo-small-29.png"></img>
-            </div>
-            <div className='names'>
-              <b>MSFT</b>
-            </div>
-            <div className='stocksvalue4'>
-                 ${Stocksvalue}<br></br>
-            </div>
-            <div className="count">
-            <form action='#'>
-                <select id='number-dd' name='number'>
-                    <option value=''></option>
-                    <option value='one'>1</option>
-                    <option value='two'>2</option>
-                    <option value='three'>3</option>
-                    <option value='four'>4</option>
-                </select>
-            </form>
-            </div>
-            <div className=' button'>
-        
-
-            {MSFTbuy ?
-            <button onClick={() => setMSFTB(MSFTbuy = false)} className='BUY'>buy</button>
-            :
-            <button onClick={() => {
-              setMSFTS(MSFTsell = false)
-              setMSFTB(MSFTbuy = true)
-            }} className='buy'>buy</button>
-          }
-          {MSFTsell ?
-            <button onClick={() => setMSFTS(MSFTsell = false)} className='SELL'>sell</button> :
-            <button onClick={() => setMSFTS(MSFTsell = true)} className='sell'>sell</button>
-          }
-        </div>
-    </div>
-</div>
-</div>
-)}*/
 const CircularProgressBar = () => {
     return (
         <div className="center-circle">
@@ -839,3 +657,112 @@ const CircularProgressBar = () => {
         </div>
     );
 };
+
+
+
+
+
+function Event_APPL() {
+
+    const [x1,setX1]= useState('event 1');
+  
+    const clickHandler= () => {
+      setX1('New Event Based on fed Data from backend Data from backend')
+    
+    }
+    return (
+      <>
+      <div className="flex-container">
+        <div className="item">
+  
+          <p>Company AAPL</p>
+          <p> {x1}</p>
+          
+           </div>
+  
+      </div>
+      
+      </>
+    );
+  
+  }
+  
+
+  function Event_AMZN() {
+
+    const [x1,setX1]= useState('event 1');
+  
+    const clickHandler= () => {
+      setX1('New Event Based on fed Data from backend Data from backend')
+    
+    }
+    return (
+      <>
+      <div className="flex-container">
+        <div className="item">
+  
+          <p>Company AMZN</p>
+          <p> {x1}</p>
+          
+           </div>
+  
+      </div>
+      
+      </>
+    );
+  
+  }
+  
+
+  function Event_IBM() {
+
+    const [x1,setX1]= useState('event 1');
+  
+    const clickHandler= () => {
+      setX1('New Event Based on fed Data from backend Data from backend')
+    
+    }
+    return (
+      <>
+      <div className="flex-container">
+        <div className="item">
+  
+          <p>Company IBM</p>
+          <p> {x1}</p>
+          
+           </div>
+  
+      </div>
+      
+      </>
+    );
+  
+  }
+  
+
+  function Event_MSFT() {
+
+    const [x1,setX1]= useState('event 1');
+  
+    const clickHandler= () => {
+      setX1('New Event Based on fed Data from backend Data from backend')
+    
+    }
+    return (
+      <>
+      <div className="flex-container">
+        <div className="item">
+  
+          <p>Company MSFT</p>
+          <p> {x1}</p>
+          
+           </div>
+  
+      </div>
+            </>
+    );
+  
+  }
+  
+
+  

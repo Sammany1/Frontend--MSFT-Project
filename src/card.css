@@ -4,9 +4,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@800&family=Orbitron:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Poppins:wght@500&display=swap');
 
+
+
+.all1{
+    display: flex;
+    flex-direction: row;
+    background-color: #144272;
+
+}
+
+.left_70{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.right_30{
+
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.chart1{
+
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .allC{
 
-    width: 70%;
+    width: 100%;
 }
 
 
@@ -83,16 +126,13 @@ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 
 .owned_card{
     /* height: 400px; */
-    width: 23%;
+    /* transform: translateY(24%); */
     flex-shrink: 0;
     border-radius: 16px;
     background-image: linear-gradient(#1b549f, #5c9ad1);
     color: #F6F1F1;
-    margin-top: 0px; 
-    margin-left: 20px;
-    margin-bottom: 0px;
-    margin-right: 4px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin: 10px;
 }
 .headerO{
     font-size: 20px;
@@ -311,3 +351,47 @@ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     transform: rotate(360deg);
   }
 }
+
+
+.item{
+    align-items: center;
+  
+    
+    background-color: #b2e0ff;
+    flex-direction: column; /* Stack text vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center;
+    display: flex;
+    border-radius: 16px;
+
+    flex-shrink: 0;
+    border-radius: 16px;
+    background-image: linear-gradient(#1b549f, #5c9ad1);
+    color: #F6F1F1;
+    /* margin-top: 0px;  */
+
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-weight: bold;
+    margin: 10px;
+    padding: 20px;
+    padding-left: 27.5%;
+    padding-right: 27.5%;
+
+  
+  
+}
+    
+
+  
+  
+  .itemss{
+    width:50px;
+  }
+  .App-link {
+    color: #61dafb;
+  }
+  
+  .flex-container{
+    display: flex;
+    justify-content: center;
+  }
