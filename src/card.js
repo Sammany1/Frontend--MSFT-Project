@@ -269,7 +269,7 @@ export default function Card(props) {
         return (<>
             <CircularProgressBar></CircularProgressBar>
         </>)
-
+    }
     // }
     // if (started) {
     //     stopInterval()
@@ -280,7 +280,6 @@ export default function Card(props) {
             <div className="left_70">
                 <Card2></Card2>
                 <div className="chart1">
-                <Navigation_Charts></Navigation_Charts>
                 <Navigation_Charts></Navigation_Charts>
                     {chartnum === 0 ? <ChartExample_appl data={AGraph}></ChartExample_appl> : <></>}
                     {chartnum === 1 ? <ChartExample_amzn data={AMGraph}></ChartExample_amzn> : <></>}
@@ -829,7 +828,7 @@ export default function Card(props) {
     }
     
 
-
+    
     function Timer2(props) {
 
 
@@ -978,4 +977,3 @@ function Event_APPL() {
   }
   
 
-  
