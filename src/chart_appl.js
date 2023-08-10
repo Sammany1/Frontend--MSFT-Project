@@ -8,25 +8,22 @@ import {
   ResponsiveContainer,
 } from "recharts";
 const ChartExample_appl = (props) => {
-  const data = [
-    { name: "January", Total: 1200 },
-   { name: "February", Total: 2100 },
-   { name: "March", Total: 800 },
-   { name: "April", Total: 1600 },
-   { name: "May", Total: 900 },
-   { name: "June", Total: 1700 },
-   { name: "June", Total: 1800 },
- 
-   { name: "June", Total: 100 },
-   { name: "June", Total: 1100 },
-   { name: "June", Total: 1300 },
-   { name: "June", Total: 1400 },
-   ];
- 
+  const data = props.data
+  const findPreviousObjectBeforeZeroTotal = (graphArray) => {
+    for (let i = 1; i < graphArray.length; i++) {
+        if (graphArray[i].Total === 0) {
+            return graphArray[i - 1];
+        }
+    }
+    return null;  
+};
+
+const previousObject = findPreviousObjectBeforeZeroTotal(data);
+
    return (
      <div className="chart">
        {/* Changing number  */}
-       <div className="title">(179.41) USD</div>
+       <div className="title">{previousObject.Total} USD</div>
  
          <AreaChart
            width={800}

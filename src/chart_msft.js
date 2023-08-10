@@ -7,26 +7,23 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-const ChartExample_msft = () => {
-  const data = [
-    { name: "January", Total: 20 },
-   { name: "February", Total: 210 },
-   { name: "March", Total: 300 },
-   { name: "April", Total: 100 },
-   { name: "May", Total: 900 },
-   { name: "June", Total: 1700 },
-   { name: "June", Total: 1800 },
- 
-   { name: "June", Total: 100 },
-   { name: "June", Total: 1100 },
-   { name: "June", Total: 1300 },
-   { name: "June", Total: 1400 },
-   ];
- 
+const ChartExample_msft = (props) => {
+  const data = props.data
+  const findPreviousObjectBeforeZeroTotal = (graphArray) => {
+    for (let i = 1; i < graphArray.length; i++) {
+        if (graphArray[i].Total === 0) {
+            return graphArray[i - 1];
+        }
+    }
+    return null;  
+};
+
+const previousObject = findPreviousObjectBeforeZeroTotal(data);
+
    return (
      <div className="chart">
        {/* Changing number  */}
-       <div className="title">(179.41) USD</div>
+       <div className="title">{previousObject.Total} USD</div>
  
          <AreaChart
            width={800}

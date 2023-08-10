@@ -374,6 +374,9 @@ body {
 .container3 {
   font-size: 26px;
   border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container3 ol {
