@@ -4,32 +4,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@800&family=Orbitron:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Poppins:wght@500&display=swap');
 
-/* .allC{ */
-    /* font-family: 'Orbitron', sans-serif; */
 
-    /* font-family: 'Oswald', sans-serif; */
-/* font-family: 'Poppins', sans-serif; */
-/* } */
+
+.all1{
+    display: flex;
+    flex-direction: row;
+    background-color: #144272;
+
+}
+
+.left_70{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.right_30{
+
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.chart1{
+
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.allC{
+
+    width: 100%;
+}
 
 
 
 .profile_card{
 
     color: #F6F1F1;
-width: 158%;
+
+
 height: 150px;
+padding: 20px;
+margin: 10px;
+
 flex-shrink: 0;
 text-align: left;
 display: flex;
 flex-direction: row;
-padding: 1rem;
+/* padding: 1rem; */
+/* margin: 10px; */
+/* margin-left:20px ; */
 border-radius: 16px;
+/* margin-right: 24.5px; */
 background-image: linear-gradient(#1b549f, #5c9ad1);
-margin-bottom: 2.2%;
-margin-top: 0px;
+/* margin-bottom: 20px;
+margin-top: 0px; */
 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-padding-right: 22.5px;
-margin-right: 2%;
+/* padding-right: 22.5px; */
 /* font-family: "Lucida Console", "Courier New", monospace; */
 /* font-family: 'DS-Digital', sans-serif; */
 
@@ -44,11 +91,15 @@ margin-right: 2%;
 
 
 .main_numberC {
-    padding-left: 150px;
-    padding-top: 10px;
+    /* padding-left: 10%;
+    padding-top: 10px; */
+    margin-top: 20%;
+    margin-left: 100%;
     color: #F6F1F1;
     font-size: 30px;
     font-weight: bold;
+    /* border: 4px solid #ffffff;
+    border-radius: 100px; */
 }
 .top_textC{
     display: flex;
@@ -75,16 +126,13 @@ margin-right: 2%;
 
 .owned_card{
     /* height: 400px; */
-    width: 23%;
+    /* transform: translateY(24%); */
     flex-shrink: 0;
     border-radius: 16px;
     background-image: linear-gradient(#1b549f, #5c9ad1);
     color: #F6F1F1;
-    margin-top: 0px; 
-    margin-left: 20px;
-    margin-bottom: 0px;
-    margin-right: 4px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin: 10px;
 }
 .headerO{
     font-size: 20px;
@@ -140,7 +188,10 @@ margin-right: 2%;
 } */
 
 
-
+.labs{
+    color: #144272;
+    font-size: 20px;
+}
 
 .amount_input [type=text]{
     padding: 12px 20px;
@@ -148,18 +199,17 @@ margin-right: 2%;
     border-radius: 40px;
     background-position: 10px 10px;
     background-repeat: no-repeat;
-    border: 4px solid #4a5a7e;
+    border: 2px solid #144272;
     background-color: #a7bceb;
     resize: none;
     transition: width 0.3s ease-in-out;
-    box-sizing: border-box;
-    
-    height: 80px;
-    width: 30%;
+    box-sizing: border-box;   
+    height: 50px;
+    width: 33%;
 
     font-size: 30px;
     /* margin-right: 27.5%; */
-    margin-top: 3%;
+    margin-top: 5%;
     /* transform: translateX(10px); */
     font-weight: bold;
     padding-top: 0px;
@@ -207,7 +257,7 @@ margin-right: 2%;
   .buy{
     background-color: white;
     color:#4CAF50;
-    border: 4px solid #4CAF50;
+    border: 2px solid #4CAF50;
     margin-right: 6px;
     border-radius: 100px;
     padding: 7px 20px;
@@ -225,7 +275,7 @@ margin-right: 2%;
   background-color: #4CAF50;
   color: #F6F6F6;
 
-  border: 4px solid #327334;
+  border: 2px solid #327334;
   margin-right: 6px;
   border-radius: 100px;
   padding: 7px 20px;
@@ -240,7 +290,7 @@ margin-right: 2%;
   .sell{
     background-color: white;
     color:hsl(13, 100%, 50%);
-    border: 4px solid hsl(13, 100%, 50%);
+    border: 2px solid hsl(13, 100%, 50%);
     margin-right: 6px;
     border-radius: 100px;
     padding: 7px 20px;
@@ -252,7 +302,7 @@ margin-right: 2%;
   .SELL{
   background-color: hsl(13, 100%, 50%);
   color: #F6F6F6;
-  border: 4px solid hsl(13, 81%, 31%);
+  border: 2px solid hsl(13, 81%, 31%);
   margin-right: 6px;
   border-radius: 100px;
   padding: 7px 20px;
@@ -301,3 +351,47 @@ margin-right: 2%;
     transform: rotate(360deg);
   }
 }
+
+
+.item{
+    align-items: center;
+  
+    
+    background-color: #b2e0ff;
+    flex-direction: column; /* Stack text vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center;
+    display: flex;
+    border-radius: 16px;
+
+    flex-shrink: 0;
+    border-radius: 16px;
+    background-image: linear-gradient(#1b549f, #5c9ad1);
+    color: #F6F1F1;
+    /* margin-top: 0px;  */
+
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-weight: bold;
+    margin: 10px;
+    padding: 20px;
+    padding-left: 27.5%;
+    padding-right: 27.5%;
+
+  
+  
+}
+    
+
+  
+  
+  .itemss{
+    width:50px;
+  }
+  .App-link {
+    color: #61dafb;
+  }
+  
+  .flex-container{
+    display: flex;
+    justify-content: center;
+  }

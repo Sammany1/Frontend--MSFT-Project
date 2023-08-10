@@ -53,4 +53,5 @@ const previousObject = findPreviousObjectBeforeZeroTotal(data);
    );
 };
 
+
 export default ChartExample_ibm;

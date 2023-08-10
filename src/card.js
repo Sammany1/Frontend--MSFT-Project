@@ -7,10 +7,12 @@ import ChartExample_ibm from "./chart_ibm.js"
 import ChartExample_msft from "./chart_msft.js"
 import Events from "./Events.js"
 import './card.css';
+import ibmImg from './ibm.png'
 import axios from "axios";
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import useInterval from "./useintervalhook.js";
+import Chart1 from "./chart.js";
 
 export default function Card(props) {
     const location = useLocation()
@@ -268,39 +270,40 @@ export default function Card(props) {
             <CircularProgressBar></CircularProgressBar>
         </>)
 
-    }
-    if (started) {
-        stopInterval()
-    }
+    // }
+    // if (started) {
+    //     stopInterval()
+    // }
     return (
         <>
-            <RoundScreen roundNumber={currentRound} />
-            <div className="all">
-                <div className="top">
-                    <Card2></Card2>
-                    <Timer2></Timer2>
-                    {/* <Leaderboard></Leaderboard> */}
-                    {/* ------------------- Ali Events ----------------------------- */}
-                    <Events></Events>
-
-                </div>
-                <div className="center">
-                    <Navigation_Charts></Navigation_Charts>
+         <div className="all1">
+            <div className="left_70">
+                <Card2></Card2>
+                <div className="chart1">
+                <Navigation_Charts></Navigation_Charts>
+                <Navigation_Charts></Navigation_Charts>
                     {chartnum === 0 ? <ChartExample_appl data={AGraph}></ChartExample_appl> : <></>}
                     {chartnum === 1 ? <ChartExample_amzn data={AMGraph}></ChartExample_amzn> : <></>}
                     {chartnum === 2 ? <ChartExample_ibm data={IGraph}></ChartExample_ibm> : <></>}
                     {chartnum === 3 ? <ChartExample_msft data={MGraph}></ChartExample_msft> : <></>}
-                    <Owned></Owned>
-
-                </div>
-                <div className='bottom'>
+                    
+                    </div>
                     {chartnum === 0 ? <AAPL_Buy_Sell_Amount num={numOfStocks}></AAPL_Buy_Sell_Amount> : <></>}
-                    {chartnum === 1 ? <AMZN_Buy_Sell_Amount num={numOfStocks}></AMZN_Buy_Sell_Amount> : <></>}
-                    {chartnum === 2 ? <IBM_Buy_Sell_Amount num={numOfStocks}></IBM_Buy_Sell_Amount> : <></>}
-                    {chartnum === 3 ? <MSFTL_Buy_Sell_Amount num={numOfStocks}></MSFTL_Buy_Sell_Amount> : <></>}
-
-                </div>
+      {chartnum === 1 ? <AMZN_Buy_Sell_Amount num={numOfStocks}></AMZN_Buy_Sell_Amount> : <></>}
+      {chartnum === 2 ? <IBM_Buy_Sell_Amount num={numOfStocks}></IBM_Buy_Sell_Amount> : <></>}
+      {chartnum === 3 ? <MSFTL_Buy_Sell_Amount num={numOfStocks}></MSFTL_Buy_Sell_Amount> : <></>}
             </div>
+            <div className="right_30">
+                <Timer2></Timer2>
+                <Event_APPL></Event_APPL>
+                {/* <Event_AMZN></Event_AMZN>
+                <Event_IBM></Event_IBM>
+                <Event_MSFT></Event_MSFT> */}
+                <Owned></Owned>
+                
+                    
+            </div>
+         </div>
         </>
     );
 
@@ -319,7 +322,7 @@ export default function Card(props) {
                         </div>
                         <div className="amount_input">
                             <form action="/url" method="GET">
-                                <input onInput={(e) => limitAndValidateInput(e.target)} pattern="[0-9]" autoFocus="autofocus" onChange={(e) => { if (e.target.value === "") { setNumOfStocks({ AAPL: 0, AMZN: numOfStocks.AMZN, IBM: numOfStocks.IBM, MSFT: numOfStocks.MSFT }); return; } if (parseInt(e.target.value) != NaN) { setNumOfStocks({ AAPL: parseInt(e.target.value), AMZN: numOfStocks.AMZN, IBM: numOfStocks.IBM, MSFT: numOfStocks.MSFT }) } }} defaultValue={numOfStocks.AAPL === 0 ? "" : numOfStocks.AAPL} type="text" id="xxx" name="xxxxd" placeholder="1234.."></input>
+                                <input onInput={(e) => limitAndValidateInput(e.target)} pattern="[0-9]" autoFocus="autofocus" onChange={(e) => { if (e.target.value === "") { setNumOfStocks({ AAPL: 0, AMZN: numOfStocks.AMZN, IBM: numOfStocks.IBM, MSFT: numOfStocks.MSFT }); return; } if (parseInt(e.target.value) != NaN) { setNumOfStocks({ AAPL: parseInt(e.target.value), AMZN: numOfStocks.AMZN, IBM: numOfStocks.IBM, MSFT: numOfStocks.MSFT }) } }} defaultValue={numOfStocks.AAPL === 0 ? "" : numOfStocks.AAPL} type="text" id="xxx" name="xxxxd" placeholder="# Stocks"></input>
                             </form>
                         </div>
 
@@ -367,7 +370,7 @@ export default function Card(props) {
                         </div>
                         <div className="amount_input">
                             <form action="/url" method="GET">
-                                <input onInput={(e) => limitAndValidateInput(e.target)} pattern="[0-9]" autoFocus="autofocus" onChange={(e) => { if (e.target.value === "") { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: 0, IBM: numOfStocks.IBM, MSFT: numOfStocks.MSFT }); return; } if (parseInt(e.target.value) != NaN) { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: parseInt(e.target.value), IBM: numOfStocks.IBM, MSFT: numOfStocks.MSFT }) } }} defaultValue={numOfStocks.AMZN === 0 ? "" : numOfStocks.AMZN} type="text" id="xxx" name="xxxxd" placeholder="1234.."></input>
+                                <input onInput={(e) => limitAndValidateInput(e.target)} pattern="[0-9]" autoFocus="autofocus" onChange={(e) => { if (e.target.value === "") { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: 0, IBM: numOfStocks.IBM, MSFT: numOfStocks.MSFT }); return; } if (parseInt(e.target.value) != NaN) { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: parseInt(e.target.value), IBM: numOfStocks.IBM, MSFT: numOfStocks.MSFT }) } }} defaultValue={numOfStocks.AMZN === 0 ? "" : numOfStocks.AMZN} type="text" id="xxx" name="xxxxd" placeholder="# Stocks"></input>
                             </form>
                         </div>
 
@@ -419,7 +422,7 @@ export default function Card(props) {
                         </div>
                         <div className="amount_input">
                             <form action="/url" method="GET">
-                                <input onInput={(e) => limitAndValidateInput(e.target)} pattern="[0-9]" autoFocus="autofocus" onChange={(e) => { if (e.target.value === "") { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: numOfStocks.AMZN, IBM: 0, MSFT: numOfStocks.MSFT }); return; } if (parseInt(e.target.value) != NaN) { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: numOfStocks.AMZN, IBM: parseInt(e.target.value), MSFT: numOfStocks.MSFT }) } }} defaultValue={numOfStocks.IBM === 0 ? "" : numOfStocks.IBM} type="text" id="xxx" name="xxxxd" placeholder="1234.."></input>
+                                <input onInput={(e) => limitAndValidateInput(e.target)} pattern="[0-9]" autoFocus="autofocus" onChange={(e) => { if (e.target.value === "") { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: numOfStocks.AMZN, IBM: 0, MSFT: numOfStocks.MSFT }); return; } if (parseInt(e.target.value) != NaN) { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: numOfStocks.AMZN, IBM: parseInt(e.target.value), MSFT: numOfStocks.MSFT }) } }} defaultValue={numOfStocks.IBM === 0 ? "" : numOfStocks.IBM} type="text" id="xxx" name="xxxxd" placeholder="# Stocks"></input>
                             </form>
                         </div>
 
@@ -463,7 +466,7 @@ export default function Card(props) {
                         </div>
                         <div className="amount_input">
                             <form action="/url" method="GET">
-                                <input onInput={(e) => limitAndValidateInput(e.target)} pattern="[0-9]" autoFocus="autofocus" onChange={(e) => { if (e.target.value === "") { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: numOfStocks.AMZN, IBM: numOfStocks.IBM, MSFT: 0 }); return; } if (parseInt(e.target.value) != NaN) { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: numOfStocks.AMZN, IBM: numOfStocks.IBM, MSFT: parseInt(e.target.value) }) } }} defaultValue={numOfStocks.MSFT === 0 ? "" : numOfStocks.MSFT} type="text" id="xxx" name="xxxxd" placeholder="1234.."></input>
+                                <input onInput={(e) => limitAndValidateInput(e.target)} pattern="[0-9]" autoFocus="autofocus" onChange={(e) => { if (e.target.value === "") { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: numOfStocks.AMZN, IBM: numOfStocks.IBM, MSFT: 0 }); return; } if (parseInt(e.target.value) != NaN) { setNumOfStocks({ AAPL: numOfStocks.AAPL, AMZN: numOfStocks.AMZN, IBM: numOfStocks.IBM, MSFT: parseInt(e.target.value) }) } }} defaultValue={numOfStocks.MSFT === 0 ? "" : numOfStocks.MSFT} type="text" id="xxx" name="xxxxd" placeholder="# stocks"></input>
                             </form>
                         </div>
 
@@ -508,7 +511,7 @@ export default function Card(props) {
                         {/* AMZN */}
                     </button>
                     <button onClick={() => setChart(2)} className="button_X_Chart" type="button" id="myBtn"  >
-                        <img width="45" height="25" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/2560px-IBM_logo.svg.png"></img>
+                        <img width="45" height="25" src={ibmImg}></img>
 
                         {/* IBM */}
                     </button>
@@ -540,7 +543,7 @@ export default function Card(props) {
                                 Welcome {user.username} <br />
                             </div>
                             <div className="top_text_subC">
-                                your account value is
+                                your account value is:
                             </div>
                         </div>
                         <div className="main_numberC">
@@ -853,6 +856,10 @@ export default function Card(props) {
     };
 }
 
+
+
+
+
 const CircularProgressBar = () => {
     return (
         <div className="center-circle">
@@ -863,3 +870,112 @@ const CircularProgressBar = () => {
         </div>
     );
 };
+
+
+
+
+
+function Event_APPL() {
+
+    const [x1,setX1]= useState('event 1');
+  
+    const clickHandler= () => {
+      setX1('New Event Based on fed Data from backend Data from backend')
+    
+    }
+    return (
+      <>
+      <div className="flex-container">
+        <div className="item">
+  
+          <p>Company AAPL</p>
+          <p> {x1}</p>
+          
+           </div>
+  
+      </div>
+      
+      </>
+    );
+  
+  }
+  
+
+  function Event_AMZN() {
+
+    const [x1,setX1]= useState('event 1');
+  
+    const clickHandler= () => {
+      setX1('New Event Based on fed Data from backend Data from backend')
+    
+    }
+    return (
+      <>
+      <div className="flex-container">
+        <div className="item">
+  
+          <p>Company AMZN</p>
+          <p> {x1}</p>
+          
+           </div>
+  
+      </div>
+      
+      </>
+    );
+  
+  }
+  
+
+  function Event_IBM() {
+
+    const [x1,setX1]= useState('event 1');
+  
+    const clickHandler= () => {
+      setX1('New Event Based on fed Data from backend Data from backend')
+    
+    }
+    return (
+      <>
+      <div className="flex-container">
+        <div className="item">
+  
+          <p>Company IBM</p>
+          <p> {x1}</p>
+          
+           </div>
+  
+      </div>
+      
+      </>
+    );
+  
+  }
+  
+
+  function Event_MSFT() {
+
+    const [x1,setX1]= useState('event 1');
+  
+    const clickHandler= () => {
+      setX1('New Event Based on fed Data from backend Data from backend')
+    
+    }
+    return (
+      <>
+      <div className="flex-container">
+        <div className="item">
+  
+          <p>Company MSFT</p>
+          <p> {x1}</p>
+          
+           </div>
+  
+      </div>
+            </>
+    );
+  
+  }
+  
+
+  

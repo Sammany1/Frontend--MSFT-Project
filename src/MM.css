@@ -1,14 +1,62 @@
-.all {
-  display: flex;
-  flex-direction: column;
+{
+  <div className="all">
+  <div className="top">
+      <Card2></Card2>
+      <Timer2></Timer2>
+      {/* <Leaderboard></Leaderboard> */}
+{/* ------------------- Ali Events ----------------------------- */}
+       {/* <Events></Events> */}
 
+  /* </div>
+  <div className="center">
+      <Navigation_Charts></Navigation_Charts>
+      {chartnum === 0 ? <ChartExample_appl></ChartExample_appl> : <></>}
+      {chartnum === 1 ? <ChartExample_amzn></ChartExample_amzn> : <></>}
+      {chartnum === 2 ? <ChartExample_ibm></ChartExample_ibm> : <></>}
+      {chartnum === 3 ? <ChartExample_msft></ChartExample_msft> : <></>}
+      <Event_APPL></Event_APPL>
+      <Owned></Owned>
+
+  </div>
+  <div className='bottom'>
+      {chartnum === 0 ? <AAPL_Buy_Sell_Amount num={numOfStocks}></AAPL_Buy_Sell_Amount> : <></>}
+      {chartnum === 1 ? <AMZN_Buy_Sell_Amount num={numOfStocks}></AMZN_Buy_Sell_Amount> : <></>}
+      {chartnum === 2 ? <IBM_Buy_Sell_Amount num={numOfStocks}></IBM_Buy_Sell_Amount> : <></>}
+      {chartnum === 3 ? <MSFTL_Buy_Sell_Amount num={numOfStocks}></MSFTL_Buy_Sell_Amount> : <></>}
+
+  </div>
+</div> */
 }
 
-.top {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+
+
+
+
+
+
+
+
+
+
+body
+{
+  width: 90%;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
 }
+
+.all{
+  background-color: #144272;
+  
+  }
+
+  .top{
+    width: 100%;
+    display: flex;
+ justify-content: space-between;
+  }
 
 .center {
 
@@ -22,11 +70,12 @@
     display: flex;
     flex-direction: row;
     /* height:  0px; */
+    margin-left: 5%;
   }
   
   .Company_Name{
 
-    color: green;
+    color: #ffffff;
     /* text-align: center;
     vertical-align: middle;
     justify-content: center;
@@ -37,7 +86,7 @@
     font-weight: bold;
     border: 4px;
     border-color: darkred; */
-    border: 4px solid hsl(229, 89%, 19%);
+    border: 2px solid #ffffff;
     margin-right: 6px;
     border-radius: 100px;
     padding: 7px 20px;
@@ -58,10 +107,9 @@
   
   .button_X_Chart {
   
-    background-color: #c2fbd7;
+    background-image: linear-gradient(#2d6bbc, #7fb9ed);
     border-radius: 100px;
-    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
-    color: green;
+    box-shadow: rgba(13, 89, 133, 0.2) 0 -25px 18px -14px inset,rgba(13, 89, 133, 0.2) 0 1px 2px,rgba(13, 89, 133, 0.2) 0 2px 4px,rgba(13, 89, 133, 0.2) 0 4px 8px,rgba(13, 89, 133, 0.2) 0 8px 16px,rgba(13, 89, 133, 0.2) 0 16px 32px;
     cursor: pointer;
     display: inline-block;
     font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
@@ -83,7 +131,8 @@
 
   
   .button_X_Chart:hover {
-    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    box-shadow: 0 3px 10px rgba(4, 91, 240, 0.2)inset;
+    /* box-shadow: rgba(0, 107, 169, 0.2) 0 -25px 18px -14px inset,rgba(0, 110, 174, 0.2) 0 1px 2px,rgba(0, 109, 218, 0.25) 0 2px 4px,rgba(8, 19, 230, 0.25) 0 4px 8px,rgba(8, 5, 180, 0.25) 1 16px 32px,rgba(19, 62, 235, 0.25) 0 16px 32px; */
     transform: scale(1.05) rotate(-1deg);
   }
   
@@ -312,6 +361,7 @@
   /* margin-left: 50px;
         margin-top: 69px; */
   display: flex;
+  width: 100%;
 
 }
 
@@ -346,9 +396,11 @@ body {
   border-radius: 16px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   color: snow;
-  width: 23%;
-  margin-bottom: 1%;
-  margin-left: 30%;
+  /* margin-bottom: 1%; */
+  /* margin-left: 30%; */
+  margin: 9px;
+  padding:17px;
+  
 }
 
 .timer {
@@ -427,4 +479,17 @@ body {
   background: #19376D;
   border-bottom-right-radius: 16px;
   border-bottom-left-radius: 16px;
+}
+
+
+
+
+
+
+.blur {
+ 
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  height: 100%;
+
 }

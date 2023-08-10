@@ -54,4 +54,5 @@ const previousObject = findPreviousObjectBeforeZeroTotal(data);
   );
 };
 
+
 export default ChartExample_amzn;

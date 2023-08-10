@@ -7,6 +7,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import "./Chart.css";
 const ChartExample_appl = (props) => {
   const data = props.data
   const findPreviousObjectBeforeZeroTotal = (graphArray) => {
