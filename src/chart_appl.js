@@ -35,7 +35,7 @@ const ChartExample_appl = (props) => {
         {/* Changing number  */}
         <div className="title">(179.41) USD</div>
           {/* <div className="chart_hight"  > */}
-          <div style={{ width: '100%', height: 300 }}>
+          <div style={{ width: '100%', height: "100%" }}>
             <ResponsiveContainer >
               <AreaChart
                    

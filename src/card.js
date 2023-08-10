@@ -293,7 +293,7 @@ export default function Card(props) {
     function Navigation_Charts() {
         return (
 
-            <div>
+            <div className="left_most_button">
                 <div className="Charts_buttons">
                     <button onClick={() => setChart(0)} className="button_X_Chart" type="button" id="myBtn"  >
                         <img width="35" height="35" src="https://www.freepnglogos.com/uploads/apple-logo-png/apple-logo-png-dallas-shootings-don-add-are-speech-zones-used-4.png"></img>
